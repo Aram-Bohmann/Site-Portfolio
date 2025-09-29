@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aram-Portfolio</title>
+    <!-- CSS PERSONALIZADO -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Código do Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- SwiperJS CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+    
+</head>
+<body id="body">
+    
+    <!-- Menu -->
+    <header>
+        <div class="interface">
+            <div class="nome">
+               <h1>Aram <span class="sobrenome">Luz</span></h1> 
+            </div> <!-- Nome -->
+
+            <nav class="menu-desktop">
+                <ul>
+                    <li><a href="#inicio" class="inicio">Início</a></li>
+                    <li><a href="#sobre" class="sobre">Sobre</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#certificados">Certificados</a></li>
+                    <li><a href="#contatos">Contatos</a></li>
+                    <div class="botao-pai">
+                        <li>
+                            <div class="btn-tema" id="btn-tema">
+                                <button onclick="trocarImagem()"><img id="minhaImagem" src="Imagens/tema-claro.png" alt="Imagem inicial"></button>
+                            </div>
+                        </li>
+                    </div>
+                </ul>
+            </nav>
+            <div class="menu-mobile">
+                <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+
+                <label for="menu-toggle" class="btn-abrir">
+                    <img src="Imagens/list.png" alt="Abrir menu" class="list">
+                </label>
+
+                <nav class="menu">
+                    <ul>
+                    <li><a href="#inicio" class="inicio">Início</a></li>
+                    <li><a href="#sobre" class="sobre">Sobre</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#certificados">Certificados</a></li>
+                    <li><a href="#contatos">Contatos</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>  <!-- Interface-->
+    </header>
+
+    <!-- Topo do Site -->
+    <main id="inicio">
+        <section class="topo-do-site">
+            <div>
+                <div class="container">
+                <img src="Imagens/banner.jpg" alt="Foto de um computador">
+                    <div class="apresentacao">
+                        <div class="elemento-escondido">
+                            <p><span>Olá Mundo</span></p>
+                            <h1>Meu nome é <span>Aram</span></h1>
+                            <p>Desenvolvedor Full Stack</p>
+                            <div class="btn-social">
+                                <hr>
+                                <a href="https://www.linkedin.com/in/aram-luz-1b0ab1321" target="_blank"><button><img src="Imagens/icon-linkedim.png" alt="LinkedIn"></button></a>
+                                <a href="https://github.com/Aram-Bohmann" target="_blank"><button><img src="Imagens/icon-github-cinza.png" alt="Github"></button></a>
+                                <span><a href="mailto:arambohmannleitedaluz@gmail.com" target="_blank"><button><img src="Imagens/icon-email.png" alt="Email"></button></a></span>
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- Interface -->
+        </section> <!-- Topo do site -->
+    </main>
+
+    <br  id="sobre"><br><br><br>
+    <!-- Sobre Mim -->
+    <section class="sobre-mim"  class="interface">
+        <div class="elemento-escondido">
+            <h2>Sobre Mim</h2>
+            <br>
+            <div style="display: flex; justify-content: center;">
+                <hr>
+            </div>
+        </div>
+        <div class="elemento-escondido">
+            <div class="sobre-pai">
+                <div class="sobre-mim-descricao">
+                    <p>
+                        Olá, Leitor! Sou um estudante no curso técnico em <span class="negrito">Ciência de Dados</span> da Cedup Timbó. E durante todos meus anos estudanto, desenvolvi uma base sólida em <span class="negrito">Python</span> (Pandas), <span class="negrito">R</span>, <span class="negrito">Java</span> e <span class="negrito">SQL</span>. Minha experiência vai desde <span class="negrito">desenvolvimento web</span> até <span class="negrito">análise e modelagem de dados</span>, com um foco na lógica de programação - minha verdadeira paixão.
+                        <br><br>
+                        O que me diferencia? Além do conhecimento técnico, participo do grupo teatral de <span class="negrito">improviso</span> Deslocado. Que me ensinou habilidades essenciais para qualquer desenvolvedor: <span class="negrito">comunicação clara</span>, <span class="negrito">trabalho em equipe</span>, <span class="negrito">adaptação rápida</span> a novos desafios e a arte de <span class="negrito">contar história.</span>
+                        <br><br>
+                        Essa combinação única me permite não apenas escrever código limpo e eficiente, mas também traduzir requisitos complexos em <span class="negrito">soluções práticas</span> que realmente fazem sentido para os usuários e equipes.
+                    </p>
+                </div>
+
+                <div class="sobre-mim-foto">
+                    <img src="Imagens/foto-aram.png" alt="Foto do desenvolvedor">
+                    <h3>Aram Bohmann Leite Da Luz</h3>
+                    <div class="txt-animado">
+                        <p>Desenvolvedor <span></span></p>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <div class="elemento-escondido">
+            <h3>Habilidades</h3>
+            <br>
+            <div class="ticker-container"">
+                <div class="ticker-wrapper">
+                    <div class="ticker-transition" id="projetos">
+                    <div class="ticker-item"><img src="Imagens/icon-powerbi.png" alt="Power BI Icon"> Power BI </div>
+                    <div class="ticker-item"><img src="Imagens/icon-R.png" alt="Power BI Icon" id="R"> Linguagem R </div>
+                    <div class="ticker-item"><img src="Imagens/icon-unity.png" alt="Unity Icon">Unity</div>
+                    <div class="ticker-item"><img src="Imagens/icon-gamemaker.png" alt="GameMaker Icon">GML</div>
+                    <div class="ticker-item"><img src="Imagens/icon-blender.png" alt="Blender Icon">Blender</div>
+                    <div class="ticker-item"><img src="Imagens/icon-figma.png" alt="Figma Icon">Figma</div>
+                    <div class="ticker-item"><img src="Imagens/icon-HTML5.png" alt="HTML Icon">HTML</div>
+                    <div class="ticker-item"><img src="Imagens/icon-CSS3.png" alt="CSS Icon">CSS</div>
+                    <div class="ticker-item"><img src="Imagens/icon-JavaScript.png" alt="JavaScript Icon">JavaScript</div>
+                    <div class="ticker-item"><img src="Imagens/icon-python.png" alt="Python Icon">Python</div>
+                    <div class="ticker-item"><img src="Imagens/icon-java.png" alt="Java icon">Java</div>
+                    <div class="ticker-item"><img src="Imagens/icon-Visual-Studio.png" alt="Visual Studio Icon">Visual Studio</div>
+                    <div class="ticker-item"><img src="Imagens/icon-Visual-Studio-Code.png" alt="VS Code Icon">VS Code</div>
+                    <div class="ticker-item"><img src="Imagens/icon-github.png" alt="Github Icon">Github</div>
+                    <div class="ticker-item"><img src="Imagens/icon-git.png" alt="Git Icon">Git</div>
+                    <div class="ticker-item"><img src="Imagens/icon-mysql.png" alt="MySQL Icon">MySQL</div>
+                    <div class="ticker-item"><img src="Imagens/icon-SQL-Server.png" alt="SQL Server Icon">SQL Server</div>
+
+                    <!-- DUPLICAÇÃO PARA LOOP -->
+                    <div class="ticker-item"><img src="Imagens/icon-powerbi.png" alt="Power BI Icon"> Power BI </div>
+                    <div class="ticker-item"><img src="Imagens/icon-R.png" alt="Power BI Icon" id="R"> Linguagem R </div>
+                    <div class="ticker-item"><img src="Imagens/icon-unity.png" alt="Unity Icon">Unity</div>
+                    <div class="ticker-item"><img src="Imagens/icon-gamemaker.png" alt="GameMaker Icon">GML</div>
+                    <div class="ticker-item"><img src="Imagens/icon-blender.png" alt="Blender Icon">Blender</div>
+                    <div class="ticker-item"><img src="Imagens/icon-figma.png" alt="Figma Icon">Figma</div>
+                    <div class="ticker-item"><img src="Imagens/icon-HTML5.png" alt="HTML Icon">HTML</div>
+                    <div class="ticker-item"><img src="Imagens/icon-CSS3.png" alt="CSS Icon">CSS</div>
+                    <div class="ticker-item"><img src="Imagens/icon-JavaScript.png" alt="JavaScript Icon">JavaScript</div>
+                    <div class="ticker-item"><img src="Imagens/icon-python.png" alt="Python Icon">Python</div>
+                    <div class="ticker-item"><img src="Imagens/icon-java.png" alt="Java icon">Java</div>
+                    <div class="ticker-item"><img src="Imagens/icon-Visual-Studio.png" alt="Visual Studio Icon">Visual Studio</div>
+                    <div class="ticker-item"><img src="Imagens/icon-Visual-Studio-Code.png" alt="VS Code Icon">VS Code</div>
+                    <div class="ticker-item"><img src="Imagens/icon-github.png" alt="Github Icon">Github</div>
+                    <div class="ticker-item"><img src="Imagens/icon-git.png" alt="Git Icon">Git</div>
+                    <div class="ticker-item"><img src="Imagens/icon-mysql.png" alt="MySQL Icon">MySQL</div>
+                    <div class="ticker-item"><img src="Imagens/icon-SQL-Server.png" alt="SQL Server Icon">SQL Server</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projetos -->
+    <section class="projetos">
+        <div class="interface">
+            <div class="elemento-escondido">
+                <h2 class="projetos-titulo">Projetos</h2>
+                <br>
+                <div style="display: flex; justify-content: center;">
+                    <hr>
+                </div>
+            </div>
+            <div class="elemento-escondido">
+                <div class="container-projetos swiper">
+                    <div class="card-wrapper">
+                        <ul class="card-list swiper-wrapper">
+                            <li class="card-item swiper-slide">
+                                <div class="card-link">
+                                    <img src="Imagens/projeto-1.png" alt="Imagem do Projeto 1" class="card-image">
+                                    <p class="badge-python">Python</p>
+                                    <p class="badge-analise">Análise de Dados</p>
+                                    <h3 class="card-title">Dashboard de Análise de Salários na Área de Dados</h2>
+                                    <div class="card-link-button">
+                                        <a href="https://dashboard-salaries-python-2025-aram.streamlit.app"  target="_blank">
+                                            <button class="card-button">Acessar Site</button>
+                                        </a>
+                                        <a href="https://github.com/Aram-Bohmann/Dashboard-Salaries-Python"  target="_blank">
+                                            <button class="card-button">Ver Código</button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="card-item swiper-slide">
+                                <div class="card-link">
+                                    <img src="Imagens/projeto-2.png" alt="Imagem do Projeto 2" class="card-image">
+                                    <p class="badge-r">Linguagem R</p>
+                                    <p class="badge-machine">Machine Learning</p>
+                                    <h3 class="card-title">Prevendo a Ocorrência de Diabetes</h2>
+                                    <div class="card-link-button">
+                                        <a href="https://github.com/Aram-Bohmann/Prevendo-a-ocorrencia-de-diabetes-Linguagem-R"  target="_blank">
+                                            <button class="card-button">Ver Código</button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="card-item swiper-slide">
+                                <div class="card-link">
+                                    <img src="Imagens/projeto-6.png" alt="Imagem do Projeto 6" class="card-image">
+                                    <p class="badge-modelagem">Modelagem de Dados</p>
+                                    <p class="badge-sql">MySQL</p>
+                                    <h3 class="card-title">Praticando Diagramas EER</h2>
+                                    <div class="card-link-button">
+                                        <a href="https://github.com/Aram-Bohmann/Praticando-Diagramas-EER/tree/main"  target="_blank">
+                                            <button class="card-button">Ver Código</button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="card-item swiper-slide">
+                                <div class="card-link">
+                                    <img src="Imagens/projeto-3.png" alt="Imagem do Projeto 3" class="card-image">
+                                    <p class="badge-r">Linguagem R</p>
+                                    <p class="badge-analise">Análise de Dados</p>
+                                    <h3 class="card-title">Análise de Dados abertos de Viagens a Serviço</h2>
+                                    <div class="card-link-button">
+                                        <a href="https://github.com/Aram-Bohmann/Analisando-dados-ViagensServico-Linguagem-R/tree/main"  target="_blank">
+                                            <button class="card-button">Ver Código</button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="card-item swiper-slide">
+                                <div class="card-link">
+                                    <img src="Imagens/projeto-4.png" alt="Imagem do Projeto 4" class="card-image">
+                                    <p class="badge-python">Python</p>
+                                    <h3 class="card-title">Práticas de Python com Entrada e Saída de dados</h2>
+                                    <div class="card-link-button">
+                                        <a href="https://github.com/Aram-Bohmann/Programas-Treinando-Python"  target="_blank">
+                                            <button class="card-button">Ver Código</button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="card-item swiper-slide">
+                                <div class="card-link">
+                                    <img src="Imagens/projeto-5.png" alt="Imagem do Projeto 5" class="card-image">
+                                    <p class="badge-gml">GML</p>
+                                    <p class="badge-designer">Game Designer</p>
+                                    <h3 class="card-title">Jogo Parodia Seraph's Last Stand</h2>
+                                    <div class="card-link-button">
+                                        <a href="https://gx.games/pt-br/games/i7z7g9/jogo-parodia-seraphs-last-stand/tracks/948d9974-6aa1-45f0-b498-7db0ad0154b9"  target="_blank">
+                                            <button class="card-button">Acessar Site</button>
+                                        </a>
+                                        <a href="https://github.com/Aram-Bohmann/Jogo-Parodia-Seraphs-Last-Stand"  target="_blank">
+                                            <button class="card-button">Ver Código</button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            
+                        </ul>
+
+                        <div class="swiper-pagination" id="certificados"></div>
+                        <div class="swiper-slide-button swiper-button-prev"></div>
+                        <div class="swiper-slide-button swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="separacao">
+
+    <!-- Certificados -->
+    <section class="certificados">
+        <div class="interface">
+            <div class="elemento-escondido">
+                <h2 class="certificados-titulo">Certificados</h2>
+                <br>
+                <div style="display: flex; justify-content: center;">
+                    <hr>
+                </div>
+            </div>
+                <div class="elemento-escondido">
+                <!-- Swiper -->
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper swiper-slide-certificado">
+                        <div class="swiper-slide">
+                            <div class="certificados-cards">
+                                <p>Ensino Técnico</p>
+                                <h3>Técnico em Ciência de Dados</h3>
+                                <p><div></div>Cedup Timbó</p>
+                                <p>1.000 Horas - 2025</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="certificados-cards">
+                                <p>Curso</p>
+                                <h3>Programador Web</h3>
+                                <p><div></div>IFRS</p>
+                                <p>200 Horas - 2025</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="certificados-cards">
+                                <p>Curso</p>
+                                <h3>Administrador de Banco de Dados</h3>
+                                <p><div></div>IFRS</p>
+                                <p>200 Horas - 2025</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="certificados-cards">
+                                <p>Curso</p>
+                                <h3>Estrutura de Dados</h3>
+                                <p><div></div>IFRS</p>
+                                <p>20 Horas - 2025</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="certificados-cards">
+                                <p>Curso</p>
+                                <h3>Análise de Dados em Linguagem R</h3>
+                                <p><div></div>Enap</p>
+                                <p>20 Horas - 2025</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="certificados-cards">
+                                <p>Curso</p>
+                                <h3>Visualização de Dados...</h3>
+                                <p><div></div>Enap</p>
+                                <p>25 Horas - 2025</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="certificados-cards">
+                                <p>Curso</p>
+                                <h3>Banco de Dados: Oracle PL/SQL</h3>
+                                <p><div></div>IFRS</p>
+                                <p>20 Horas - 2025</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="certificados-cards">
+                                <p>Curso</p>
+                                <h3>Desvendando a Indústria 4.0</h3>
+                                <p><div></div>SENAI/SC</p>
+                                <p>20 Horas - 2020</p>
+                            </div>
+                        </div>
+                    </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contatos -->
+    <footer id="contatos">
+        <div class="interface">
+            <p class="conversar">Vamos Conversar!</p>
+            <div class="btn-social">
+                <a href="https://www.linkedin.com/in/aram-luz-1b0ab1321" target="_blank"><button><img src="Imagens/icon-linkedim.png" alt="LinkedIn" id="linkedin"></button></button></a>
+                <a href="https://github.com/Aram-Bohmann" target="_blank"><button><img src="Imagens/icon-github-cinza.png" alt="Github" id="github"></button></a>
+                <span><a href="mailto:arambohmannleitedaluz@gmail.com" target="_blank"><button ><img src="Imagens/icon-email.png" alt="Email" id="email"></button></a></span>
+            </div>
+            <p class="creditos">© 2025 Aram Bohmann Leite da Luz. Todos os direitos reservados.</p>
+
+        </div> <!-- interface-->
+    </footer>
+
+    <!-- Link SwiperJS Script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <!-- Link do JavaScript -->
+    <script src="index.js"></script>
+</body>
+</html>
