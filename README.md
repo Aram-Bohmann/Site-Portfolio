@@ -4,10 +4,9 @@ Este repositório armazena os códigos do meu Portfólio, realizado com HTML, CS
 
 ## 👀 Visualização
 
-* Disponível para visualização em https://dashboard-salaries-python-2025-aram.streamlit.app
+* Disponível para visualização em https://aram-bohmann.github.io/Site-Portfolio/
 
 ## 🛠️ Construído com
 
 * [Visual Studio](https://code.visualstudio.com) - O ambiente de desenvolvimento integrado utilizado;
 * [JavaScript] - Linguagem de programação utilizada, juntamente com o HTML e o CSS.
-* [Streamlit](https://streamlit.io)
