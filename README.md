@@ -2,6 +2,10 @@
 ### Descrição
 Este repositório armazena os códigos do meu Portfólio, realizado com HTML, CSS e JavaScript.
 
+## 👀 Visualização
+
+* Disponível para visualização em https://aram-bohmann.github.io/Site-Portfolio/
+  
 Contendo ao todo cinco seções dentro do site, sendo eles:
 
 - **Início**
@@ -16,10 +20,6 @@ Contendo ao todo cinco seções dentro do site, sendo eles:
 - **Certificados e Contatos**
 <img width="1906" height="1080" alt="image" src="https://github.com/user-attachments/assets/e2d3acb1-730c-41c3-be5e-0f04a9d4fe16" />
 
-
-## 👀 Visualização
-
-* Disponível para visualização em https://aram-bohmann.github.io/Site-Portfolio/
 
 ## 🛠️ Construído com
 
