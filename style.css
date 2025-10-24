@@ -666,6 +666,30 @@ body.dark .card-list .card-item .card-link {
     display: inline-block;
     font-size: 14px;
 }
+.card-list .card-link .badge-cordova {
+    color: #C94D82;
+    padding: 4px 10px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin: 16px 0 18px;
+    background: #FFE0F0;
+    width: fit-content;
+    border-radius: 50px;
+    display: inline-block;
+    font-size: 14px;
+}
+.card-list .card-link .badge-desenvolvimento-web {
+    color:  #5372F0;
+    padding: 4px 10px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin: 16px 0 18px;
+    background: #F7DFF5;
+    width: fit-content;
+    border-radius: 50px;
+    display: inline-block;
+    font-size: 14px;
+}
 .card-list .card-link .card-title{
     font-size: 1.19rem;
     color: var(--branco);
