@@ -64,12 +64,6 @@ Criar uma plataforma digital profissional que demonstre minhas competências té
 - ✅ **Ticker de Habilidades** - Animação horizontal infinita de tecnologias
 - ✅ **Botões CTA** - Call-to-actions para GitHub e sites externos
 
-### 📱 Responsividade
-- ✅ Desktop (1920px+)
-- ✅ Laptop (1366px - 1920px)
-- ✅ Tablet (768px - 1366px)
-- ✅ Mobile (320px - 768px)
-
 ---
 
 ## 🛠️ Tecnologias Utilizadas
