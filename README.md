@@ -92,27 +92,6 @@ Criar uma plataforma digital profissional que demonstre minhas competências té
 
 ---
 
-## 📂 Estrutura do Projeto
-```
-Site-Portfolio/
-│
-├── index.html              # Estrutura HTML principal
-├── style.css               # Estilos globais e responsividade
-├── script.js               # Lógica JavaScript (tema, carrossel, animações)
-│
-├── Imagens/                # Assets visuais
-│   ├── banner.jpg
-│   ├── foto-aram.jpeg
-│   ├── tema-claro.png
-│   ├── tema-escuro.png
-│   ├── icon-*.png          # Ícones de tecnologias
-│   └── projeto-*.png       # Thumbnails dos projetos
-│
-└── README.md               # Documentação
-```
-
----
-
 ## 🚀 Destaques Técnicos
 
 ### Performance
