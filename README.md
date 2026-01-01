@@ -37,7 +37,7 @@ Criar uma plataforma digital profissional que demonstre minhas competências té
 </details>
 
 <details>
-<summary><b>💼 Projetos</b> - Carrossel interativo com 9 projetos técnicos</summary>
+<summary><b>💼 Projetos</b> - Carrossel interativo com projetos técnicos</summary>
 <br>
 <img width="100%" alt="Seção Projetos" src="https://github.com/user-attachments/assets/f73f12b0-6cc5-48bb-a095-80cc063371a3" />
 </details>
