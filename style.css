@@ -433,19 +433,19 @@ body.dark .txt-animado span::after {
 }
 @keyframes palavras {
     0%, 20%{
-        content: "Full Stack";
+        content: "Cientista de dados";
     }
     21%, 40%{
-        content: "Front-End";
+        content: "Engenheiro de dados";
     }
     41%, 60%{
-        content: "Back-End";
+        content: "Analista de dados";
     }
     61%, 80%{
-        content: " SQL";
+        content: "Arquiteto de dados";
     }
     81%, 100%{
-        content: "GML";
+        content: "UX Design";
     } 
 }
 
@@ -933,5 +933,162 @@ body.dark footer p{
         to {
             transform: translateX(-750%);
         }
+    }
+}
+
+/* Seção Formação Acadêmica */
+.formacao-academica {
+    padding: 80px 4%;
+    color: var(--branco);
+}
+body.dark .formacao-academica {
+    color: var(--texto);
+}
+
+.formacao-academica h2 {
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.formacao-academica hr {
+    width: 10%;
+    height: 1px;
+    border: 0px;
+    border-top: 3px solid var(--amarelo);
+    border-radius: 10px;
+    transition: .5s;
+    margin-bottom: 60px;
+}
+
+/* Container dos cards de formação */
+.formacao-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Card individual de formação */
+.formacao-card {
+    display: flex;
+    gap: 25px;
+    padding: 30px;
+    background-color: var(--branco-escuro); /* Adapte conforme seu tema */
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+body.dark .formacao-card {
+    background-color: var(--cartao); /* Adapte conforme seu tema */
+    border: 2px solid var(--cartao-borda);
+}
+
+.formacao-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Ícone de formação */
+.formacao-icone {
+    flex-shrink: 0;
+}
+
+.formacao-icone img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+/* Conteúdo do card */
+.formacao-conteudo {
+    flex: 1;
+}
+
+.formacao-conteudo h3 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    color: var(--cor-titulo); /* Adapte conforme seu tema */
+}
+
+.formacao-conteudo .instituicao {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--cor-destaque); /* Adapte conforme seu tema */
+    margin-bottom: 5px;
+}
+
+.formacao-conteudo .periodo {
+    font-size: 0.95rem;
+    color: var(--cor-secundaria); /* Adapte conforme seu tema */
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.formacao-conteudo .descricao {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--cor-texto); /* Adapte conforme seu tema */
+}
+
+/* Responsividade para tablets */
+@media screen and (max-width: 768px) {
+    .formacao-academica {
+        padding: 60px 4%;
+    }
+
+    .formacao-academica h2 {
+        font-size: 2rem;
+    }
+
+    .formacao-card {
+        flex-direction: column;
+        padding: 25px;
+    }
+
+    .formacao-icone {
+        text-align: center;
+    }
+
+    .formacao-conteudo h3 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Responsividade para mobile */
+@media screen and (max-width: 480px) {
+    .formacao-academica {
+        padding: 40px 4%;
+    }
+
+    .formacao-academica h2 {
+        font-size: 1.8rem;
+    }
+
+    .formacao-card {
+        padding: 20px;
+    }
+
+    .formacao-icone img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .formacao-conteudo h3 {
+        font-size: 1.2rem;
+    }
+
+    .formacao-conteudo .instituicao {
+        font-size: 1rem;
+    }
+
+    .formacao-conteudo .periodo {
+        font-size: 0.9rem;
+    }
+
+    .formacao-conteudo .descricao {
+        font-size: 0.95rem;
     }
 }
