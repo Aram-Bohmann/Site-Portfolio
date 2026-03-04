@@ -1092,3 +1092,248 @@ body.dark .formacao-card {
         font-size: 0.95rem;
     }
 }
+
+/* SEÇÃO EXPERIÊNCIA PROFISSIONAL */
+
+.experiencia-profissional {
+    padding: 0 4% 60px;
+    color: var(--branco);
+}
+
+.experiencia-profissional h2 {
+    color: var(--branco);
+    text-align: center;
+}
+body.dark .experiencia-profissional h2 {
+    color: var(--texto);
+}
+
+.experiencia-profissional hr {
+    width: 10%;
+    border: 0;
+    border-top: 3px solid var(--amarelo);
+    border-radius: 10px;
+    margin-bottom: 50px;
+    transition: .5s;
+}
+body.dark .experiencia-profissional hr {
+    border-top: 3px solid var(--amarelo-bordas);
+}
+
+/* Timeline container */
+.timeline {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    padding-left: 40px;
+}
+
+/* Linha vertical da timeline */
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 14px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--amarelo), transparent);
+    border-radius: 2px;
+    transition: .5s;
+}
+body.dark .timeline::before {
+    background: linear-gradient(to bottom, var(--amarelo-bordas), transparent);
+}
+
+/* Item da timeline */
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+/* Ponto (bolinha) da timeline */
+.timeline-dot {
+    position: absolute;
+    left: -33px;
+    top: 28px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--amarelo);
+    border: 3px solid var(--cinza-escuro);
+    box-shadow: 0 0 0 3px var(--amarelo);
+    transition: .5s;
+    z-index: 1;
+}
+body.dark .timeline-dot {
+    background-color: var(--amarelo-bordas);
+    border-color: var(--fundo);
+    box-shadow: 0 0 0 3px var(--amarelo-bordas);
+}
+
+/* Card da experiência */
+.exp-card {
+    background: var(--branco-escuro);
+    border: 1px solid var(--branco-cinza);
+    border-radius: 16px;
+    padding: 28px 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.5s;
+}
+body.dark .exp-card {
+    background: var(--cartao);
+    border: 2px solid var(--cartao-borda);
+}
+
+.exp-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+}
+
+/* Cabeçalho do card */
+.exp-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 18px;
+}
+
+/* Badge "Emprego Atual" */
+.exp-badge {
+    display: inline-block;
+    padding: 3px 12px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 700;
+    background: var(--amarelo);
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    letter-spacing: 0.3px;
+    transition: .5s;
+}
+body.dark .exp-badge {
+    background: var(--amarelo-bordas);
+}
+
+/* Cargo */
+.exp-cargo {
+    font-size: 1.45rem;
+    font-weight: 700;
+    color: var(--branco);
+    margin-bottom: 8px;
+    transition: .5s;
+}
+body.dark .exp-cargo {
+    color: var(--texto);
+}
+
+/* Empresa e Período */
+.exp-empresa,
+.exp-periodo {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 0.97rem;
+    color: var(--branco-cinza);
+    margin-bottom: 5px;
+    transition: .5s;
+}
+body.dark .exp-empresa,
+body.dark .exp-periodo {
+    color: #666;
+}
+
+.exp-empresa {
+    font-weight: 600;
+    color: var(--amarelo);
+}
+body.dark .exp-empresa {
+    color: var(--amarelo-bordas);
+}
+
+/* Ícone SVG inline */
+.exp-icon {
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+    stroke: currentColor;
+}
+
+/* Lista de atividades */
+.exp-body {
+    border-top: 1px solid var(--branco-escuro);
+    padding-top: 16px;
+    transition: .5s;
+}
+body.dark .exp-body {
+    border-top: 1px solid var(--cartao-borda);
+}
+
+.exp-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.exp-lista li {
+    position: relative;
+    padding-left: 20px;
+    font-size: 0.97rem;
+    line-height: 1.6;
+    color: var(--branco-cinza);
+    transition: .5s;
+}
+body.dark .exp-lista li {
+    color: #555;
+}
+
+/* Marcador personalizado da lista */
+.exp-lista li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--amarelo);
+    transition: .5s;
+}
+body.dark .exp-lista li::before {
+    background-color: var(--amarelo-bordas);
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .timeline {
+        padding-left: 28px;
+    }
+    .timeline-dot {
+        left: -22px;
+    }
+    .exp-card {
+        padding: 20px;
+    }
+    .exp-cargo {
+        font-size: 1.2rem;
+    }
+    .exp-header {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .exp-cargo {
+        font-size: 1.1rem;
+    }
+    .exp-empresa,
+    .exp-periodo {
+        font-size: 0.9rem;
+    }
+    .exp-lista li {
+        font-size: 0.9rem;
+    }
+}
