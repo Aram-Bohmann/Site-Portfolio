@@ -101,3 +101,31 @@ document.querySelectorAll('.menu a').forEach(link => {
     document.getElementById('menu-toggle').checked = false;
   });
 });
+// Filtro de Certificados
+const filtrosBtns = document.querySelectorAll('.cert-filtro-btn');
+const certCards = document.querySelectorAll('.cert-card');
+
+filtrosBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        filtrosBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filtro = btn.dataset.filtro;
+        let visiveis = 0;
+
+        certCards.forEach(card => {
+            const cat = card.dataset.cat;
+            if (filtro === 'todos' || cat === filtro) {
+                card.classList.remove('cert-oculto');
+                card.style.position = '';
+                card.style.visibility = '';
+                visiveis++;
+            } else {
+                card.classList.add('cert-oculto');
+            }
+        });
+
+        const cntEl = document.getElementById('cnt-total');
+        if (cntEl) cntEl.textContent = filtro === 'todos' ? '22' : visiveis;
+    });
+});
