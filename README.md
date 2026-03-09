@@ -24,28 +24,37 @@ Criar uma plataforma digital profissional que demonstre minhas competências té
 
 ### 📱 Seções do Site
 
+### 📱 Seções do Site
 <details>
 <summary><b>🏠 Início</b> - Landing page com apresentação e links sociais</summary>
 <br>
 <img width="100%" alt="Seção Início" src="https://github.com/user-attachments/assets/14ce27e9-d9bc-488f-aeb0-f7716f49cd79" />
 </details>
-
 <details>
 <summary><b>👤 Sobre</b> - Biografia, habilidades técnicas e diferenciais</summary>
 <br>
 <img width="100%" alt="Seção Sobre" src="https://github.com/user-attachments/assets/bfb51b9c-da87-43e3-95d7-d3c0b5fd07ae" />
 </details>
-
 <details>
-<summary><b>💼 Projetos</b> - Carrossel interativo com projetos técnicos</summary>
+<summary><b>💼 Projetos</b> - Grid interativo com filtros por categoria e projetos técnicos</summary>
 <br>
-<img width="100%" alt="Seção Projetos" src="https://github.com/user-attachments/assets/f73f12b0-6cc5-48bb-a095-80cc063371a3" />
+<img width="100%" alt="image" src="https://github.com/user-attachments/assets/2b44f208-f081-40c3-97c2-a1fbe51b4c8b" />
 </details>
-
+<details>
+<summary><b>🧑‍💼 Experiência Profissional</b> - Histórico de experiências em formato timeline</summary>
+<br>
+<img width="100%" alt="image" src="https://github.com/user-attachments/assets/c9c2259e-7cc3-4481-a19a-4cdb52a970f1" />
+</details>
+<details>
+<summary><b>🎓 Formação Acadêmica</b> - Graduações e cursos técnicos</summary>
+<br>
+<img width="100%" alt="image" src="https://github.com/user-attachments/assets/e4d00537-f885-4e4d-99ce-5edfd7146ef2" />
+</details>
 <details>
 <summary><b>📜 Certificados & 📧 Contatos</b> - Qualificações e formas de contato</summary>
 <br>
-<img width="100%" alt="Seção Certificados e Contatos" src="https://github.com/user-attachments/assets/e2d3acb1-730c-41c3-be5e-0f04a9d4fe16" />
+<img width="100%" alt="image" src="https://github.com/user-attachments/assets/86ad06e0-7a51-4478-8c1f-5f9dbe886957" />
+
 </details>
 
 ---
