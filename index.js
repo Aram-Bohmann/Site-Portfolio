@@ -1,56 +1,75 @@
-new Swiper('.card-wrapper', {
-  spaceBetween: 30,
+const projFiltros = document.querySelectorAll('.proj-filtro-btn');
+const projCards   = document.querySelectorAll('.proj-card');
 
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-    dynamicBullets: true
-  },
+projFiltros.forEach(btn => {
+    btn.addEventListener('click', () => {
+        projFiltros.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
 
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
+        const filtro = btn.dataset.filtro;
 
-  breakpoints: {
-    0: {
-        slidesPerView: 1
-    },
-    768: {
-        slidesPerView: 2
-    },
-    1024: {
-        slidesPerView: 3
-    },
-  }
+        projCards.forEach(card => {
+            const cats = card.dataset.categoria || '';
+            const match = filtro === 'todos' || cats.split(' ').includes(filtro);
+
+            if (match) {
+                card.classList.remove('oculto');
+                card.style.animation = 'none';
+                card.offsetHeight; // reflow
+                card.style.animation = 'projFadeIn 0.3s ease forwards';
+            } else {
+                card.classList.add('oculto');
+            }
+        });
+    });
 });
 
-new Swiper(".mySwiper", {
-  slidesPerView: 4,
-  grid: {
-    rows: 2,
-  },
-  spaceBetween: 30,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-    dynamicBullets: true
-  },
-  
-  breakpoints: {
-    0: {
-        slidesPerView: 1
-    },
-    768: { 
-        slidesPerView: 3
-    },
-    1024: {
-        slidesPerView: 4
-    },
-  }
+// Keyframes de entrada
+const projStyle = document.createElement('style');
+projStyle.textContent = `
+@keyframes projFadeIn {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+`;
+document.head.appendChild(projStyle);
+
+
+const filtros = document.querySelectorAll('.cert-filtro-btn');
+const cards   = document.querySelectorAll('.cert-card');
+
+filtros.forEach(btn => {
+    btn.addEventListener('click', () => {
+        // Atualiza botão ativo
+        filtros.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filtro = btn.dataset.filtro;
+
+        cards.forEach(card => {
+            const match = filtro === 'todos' || card.dataset.categoria === filtro;
+            if (match) {
+                card.classList.remove('oculto');
+                // Pequena animação de entrada
+                card.style.animation = 'none';
+                card.offsetHeight; // reflow
+                card.style.animation = 'certFadeIn 0.3s ease forwards';
+            } else {
+                card.classList.add('oculto');
+            }
+        });
+    });
 });
+
+// Animação de entrada dos cards
+const styleTag = document.createElement('style');
+styleTag.textContent = `
+@keyframes certFadeIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+`;
+document.head.appendChild(styleTag);
 
 let trilho = document.getElementById('btn-tema')
 let body = document.getElementById('body')
