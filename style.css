@@ -1657,12 +1657,11 @@ body.dark .exp-lista li::before {
 
 /* Estado colapsado: mostra só 1 linha (ajuste conforme necessário) */
 .proj-grid.colapsado {
-    max-height: 420px; /* ~1 linha de cards */
+    max-height: 420px; /* mostra ~1 linha de 3 cards */
     overflow: hidden;
 }
-
 .cert-grid.colapsado {
-    max-height: 220px; /* ~1 linha de cards */
+    max-height: 220px; /* mostra ~1 linha de 4 cards */
     overflow: hidden;
 }
 
@@ -1673,14 +1672,14 @@ body.dark .exp-lista li::before {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 120px;
-    background: linear-gradient(to bottom, transparent, var(--cinza-escuro));
+    height: 160px;
+    background: linear-gradient(to bottom, transparent, var(--cinza-escuro) 85%);
     pointer-events: none;
     transition: opacity 0.4s ease, background 0.5s;
 }
 body.dark .proj-grid-fade,
 body.dark .cert-grid-fade {
-    background: linear-gradient(to bottom, transparent, var(--fundo));
+    background: linear-gradient(to bottom, transparent, var(--fundo) 85%);
 }
 
 .proj-grid-fade.oculto,
@@ -1735,4 +1734,9 @@ body.dark .btn-ver-mais:hover {
 }
 .cert-grid {
     margin-bottom: 0 !important;
+}
+
+.proj-grid-wrapper,
+.cert-grid-wrapper {
+    position: relative;
 }

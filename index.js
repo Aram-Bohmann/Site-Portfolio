@@ -11,7 +11,7 @@ projFiltros.forEach(btn => {
         projCards.forEach(card => {
             const cats = card.dataset.categoria || '';
             const match = filtro === 'todos' || cats.split(' ').includes(filtro);
-
+            
             if (match) {
                 card.classList.remove('oculto');
                 card.style.animation = 'none';
@@ -20,7 +20,14 @@ projFiltros.forEach(btn => {
             } else {
                 card.classList.add('oculto');
             }
+            
         });
+        if (projGrid.classList.contains('colapsado')) {
+                    projGrid.classList.remove('colapsado');
+                    projFade.classList.add('oculto');
+                    btnProjMais.classList.add('expandido');
+                    btnProjMais.childNodes[0].textContent = 'Ver menos projetos ';
+        }
     });
 });
 
@@ -50,6 +57,7 @@ filtros.forEach(btn => {
             const match = filtro === 'todos' || card.dataset.categoria === filtro;
             if (match) {
                 card.classList.remove('oculto');
+                
                 // Pequena animação de entrada
                 card.style.animation = 'none';
                 card.offsetHeight; // reflow
@@ -58,6 +66,12 @@ filtros.forEach(btn => {
                 card.classList.add('oculto');
             }
         });
+        if (projGrid.classList.contains('colapsado')) {
+                    projGrid.classList.remove('colapsado');
+                    projFade.classList.add('oculto');
+                    btnProjMais.classList.add('expandido');
+                    btnProjMais.childNodes[0].textContent = 'Ver menos projetos ';
+        }
     });
 });
 
@@ -120,3 +134,52 @@ document.querySelectorAll('.menu a').forEach(link => {
     document.getElementById('menu-toggle').checked = false;
   });
 });
+
+// ── VER MAIS: Projetos ──────────────────────────────────────────────
+const projGrid    = document.getElementById('proj-grid');
+const projFade    = document.getElementById('proj-fade');
+const btnProjMais = document.getElementById('btn-ver-mais-proj');
+
+// Estado inicial: colapsado
+projGrid.classList.add('colapsado');
+
+btnProjMais.addEventListener('click', () => {
+    const expandido = projGrid.classList.toggle('colapsado');
+    // toggle retorna true se a classe FOI adicionada (colapsou), false se foi removida (expandiu)
+    const estaColapsado = projGrid.classList.contains('colapsado');
+
+    projFade.classList.toggle('oculto', !estaColapsado);
+    btnProjMais.classList.toggle('expandido', !estaColapsado);
+    btnProjMais.querySelector('span') 
+        ? null 
+        : null; // não há span, vamos trocar o texto diretamente
+    btnProjMais.childNodes[0].textContent = estaColapsado
+        ? 'Ver mais projetos '
+        : 'Ver menos projetos ';
+});
+
+// Inicializa fade visível
+projFade.classList.remove('oculto');
+
+
+// ── VER MAIS: Certificados ──────────────────────────────────────────
+const certGrid    = document.getElementById('cert-grid');
+const certFade    = document.getElementById('cert-fade');
+const btnCertMais = document.getElementById('btn-ver-mais-cert');
+
+// Estado inicial: colapsado
+certGrid.classList.add('colapsado');
+
+btnCertMais.addEventListener('click', () => {
+    const estaColapsado = certGrid.classList.toggle('colapsado');
+    // após toggle: estaColapsado = true significa que ACABOU de colapsar
+
+    certFade.classList.toggle('oculto', !certGrid.classList.contains('colapsado'));
+    btnCertMais.classList.toggle('expandido', !certGrid.classList.contains('colapsado'));
+    btnCertMais.childNodes[0].textContent = certGrid.classList.contains('colapsado')
+        ? 'Ver mais certificados '
+        : 'Ver menos certificados ';
+});
+
+// Inicializa fade visível
+certFade.classList.remove('oculto');
