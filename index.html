@@ -3,654 +3,618 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aram-Portfolio</title>
-    <!-- CSS PERSONALIZADO -->
-    <link rel="stylesheet" href="style.css">
-    <!-- Código do Google fonts -->
+    <title>Aram Luz — Data Scientist</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <!-- SwiperJS CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body id="body">
-    
-    <!-- Menu -->
-    <header>
-        <div class="interface">
-            <div class="nome">
-               <h1>Aram <span class="sobrenome">Luz</span></h1> 
-            </div> <!-- Nome -->
 
-            <nav class="menu-desktop">
-                <ul>
-                    <li><a href="#inicio" class="inicio">Início</a></li>
-                    <li><a href="#sobre" class="sobre">Sobre</a></li>
-                    <li><a href="#projetos">Projetos</a></li>
-                    <li><a href="#experiencia">Experiência</a></li>
-                    <li><a href="#academica">Formação</a></li>
-                    <li><a href="#certificados">Certificados</a></li>
-                    <li><a href="#contatos">Contatos</a></li>
-                    <div class="botao-pai">
-                        <li>
-                            <div class="btn-tema" id="btn-tema">
-                                <button onclick="trocarImagem()"><img id="minhaImagem" src="Imagens/tema-claro.png" alt="Imagem inicial"></button>
-                            </div>
-                        </li>
-                    </div>
-                </ul>
+    <!-- HEADER -->
+    <header id="header">
+        <div class="header-inner">
+            <a href="#inicio" class="logo">
+                <span class="logo-bracket">[</span>aram<span class="logo-accent">.</span>luz<span class="logo-bracket">]</span>
+            </a>
+
+            <nav class="nav-desktop">
+                <a href="#sobre">sobre</a>
+                <a href="#stack">stack</a>
+                <a href="#projetos">projetos</a>
+                <a href="#experiencia">experiência</a>
+                <a href="#formacao">formação</a>
+                <a href="#certificados">certificados</a>
+                <a href="#contatos" class="nav-cta">contato</a>
             </nav>
-            <div class="menu-mobile">
-                <input type="checkbox" id="menu-toggle" class="menu-toggle" />
 
-                <label for="menu-toggle" class="btn-abrir">
-                    <img src="Imagens/list.png" alt="Abrir menu" class="list">
-                </label>
-
-                <nav class="menu">
-                    <ul>
-                    <li><a href="#inicio" class="inicio">Início</a></li>
-                    <li><a href="#sobre" class="sobre">Sobre</a></li>
-                    <li><a href="#projetos">Projetos</a></li>
-                    <li><a href="#experiencia">Experiência</a></li>
-                    <li><a href="#academica">Formação</a></li>
-                    <li><a href="#certificados">Certificados</a></li>
-                    <li><a href="#contatos">Contatos</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>  <!-- Interface-->
-    </header>
-
-    <!-- Topo do Site -->
-    <main id="inicio">
-        <section class="topo-do-site">
-            <div>
-                <div class="container">
-                <img src="Imagens/banner.jpg" alt="Foto de um computador">
-                    <div class="apresentacao">
-                        <div class="elemento-escondido">
-                            <p><span>Olá Mundo</span></p>
-                            <h1>Meu nome é <span>Aram</span></h1>
-                            <p>Data Scientist | Full-Stack Analytics & Machine Learning </p>
-                            <div class="btn-social">
-                                <hr>
-                                <a href="https://www.linkedin.com/in/aram-luz-1b0ab1321" target="_blank"><button><img src="Imagens/icon-linkedim.png" alt="LinkedIn"></button></a>
-                                <a href="https://github.com/Aram-Bohmann" target="_blank"><button><img src="Imagens/icon-github-cinza.png" alt="Github"></button></a>
-                                <span><a href="mailto:arambohmannleitedaluz@gmail.com" target="_blank"><button><img src="Imagens/icon-email.png" alt="Email"></button></a></span>
-                                <hr>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> <!-- Interface -->
-        </section> <!-- Topo do site -->
-    </main>
-
-    <br  id="sobre"><br><br><br>
-    <!-- Sobre Mim -->
-    <section class="sobre-mim"  class="interface">
-        <div class="elemento-escondido">
-            <h2>Sobre Mim</h2>
-            <br>
-            <div style="display: flex; justify-content: center;">
-                <hr>
+            <div class="header-controls">
+                <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+                    <span class="theme-icon">◐</span>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
             </div>
         </div>
-        <div class="elemento-escondido">
-            <div class="sobre-pai">
-                <div class="sobre-mim-descricao">
-                    <p>
-                        Olá, Leitor! Sou formado no curso técnico em <span class="negrito">Ciência de Dados</span> da Cedup Timbó, cursando <span class="negrito">tecnólogo</span> em Ciência de Dados pela <span class="negrito">Uninter</span>. Com experiência em <span class="negrito">Python</span> (Pandas, Matplotlib, NumPy), <span class="negrito">R</span>, <span class="negrito">Java</span> e <span class="negrito">SQL</span>. Minha experiência vai desde <span class="negrito">desenvolvimento web</span> até <span class="negrito">análise, visualização e modelagem de dados</span>, com o diferencial de <span class="negrito">machine Learning</span>.
-                        <br><br>
-                        O que me diferencia? Além do conhecimento técnico, participo do grupo teatral de <span class="negrito">improviso</span>. Que me ensinou habilidades essenciais para qualquer desenvolvedor: <span class="negrito">comunicação clara</span>, <span class="negrito">trabalho em equipe</span>, <span class="negrito">adaptação rápida</span> a novos desafios e a arte de <span class="negrito">contar história.</span>
-                        <br><br>
-                        Essa combinação única me permite não apenas escrever código limpo e eficiente, mas também traduzir requisitos complexos em <span class="negrito">soluções práticas</span> que realmente fazem sentido para os usuários e equipes.
-                    </p>
-                </div>
 
-                <div class="sobre-mim-foto">
-                    <img src="Imagens/foto-aram.jpeg" alt="Foto do desenvolvedor">
-                    <h3>Aram Bohmann Leite Da Luz</h3>
-                    <div class="txt-animado">
-                        <p><span></span></p>
-                    </div>
+        <!-- Mobile Nav -->
+        <nav class="nav-mobile" id="navMobile">
+            <a href="#sobre" class="mobile-link">sobre</a>
+            <a href="#stack" class="mobile-link">stack</a>
+            <a href="#projetos" class="mobile-link">projetos</a>
+            <a href="#experiencia" class="mobile-link">experiência</a>
+            <a href="#formacao" class="mobile-link">formação</a>
+            <a href="#certificados" class="mobile-link">certificados</a>
+            <a href="#contatos" class="mobile-link">contato</a>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+        <div class="hero-bg">
+            <canvas id="gridCanvas"></canvas>
+        </div>
+        <div class="hero-content">
+            <div class="hero-tag reveal">
+                <span class="dot-pulse"></span>disponível para oportunidades
+            </div>
+            <h1 class="hero-name reveal delay-1">
+                <span class="name-line">Aram</span>
+                <span class="name-line accent">Luz</span>
+            </h1>
+            <p class="hero-role reveal delay-2">
+                <span class="typed-text" id="typedText"></span><span class="cursor">|</span>
+            </p>
+            <p class="hero-desc reveal delay-3">
+                Transformo dados brutos em decisões inteligentes. Especialista em análise, 
+                engenharia e automação de dados — com a clareza de quem também faz teatro de improviso.
+            </p>
+            <div class="hero-actions reveal delay-4">
+                <a href="#projetos" class="btn-primary">Ver Projetos</a>
+                <a href="https://www.linkedin.com/in/aram-luz-1b0ab1321" target="_blank" class="btn-ghost">LinkedIn →</a>
+            </div>
+            <div class="hero-stats reveal delay-5">
+                <div class="hstat">
+                    <span class="hstat-num">14</span>
+                    <span class="hstat-label">Projetos</span>
+                </div>
+                <div class="hstat-sep"></div>
+                <div class="hstat">
+                    <span class="hstat-num">24</span>
+                    <span class="hstat-label">Certificados</span>
+                </div>
+                <div class="hstat-sep"></div>
+                <div class="hstat">
+                    <span class="hstat-num">1.367h</span>
+                    <span class="hstat-label">de Formação</span>
                 </div>
             </div>
-        </div> 
-        <div class="elemento-escondido">
-            <h3>Habilidades</h3>
-            <br>
-            <div class="ticker-container"">
-                <div class="ticker-wrapper">
-                    <div class="ticker-transition" id="projetos">
-                    <div class="ticker-item"><img src="Imagens/icon-powerbi.png" alt="Power BI Icon"> Power BI </div>
-                    <div class="ticker-item"><img src="Imagens/icon-R.png" alt="Power BI Icon" id="R"> Linguagem R </div>
-                    <div class="ticker-item"><img src="Imagens/icon-unity.png" alt="Unity Icon">Unity</div>
-                    <div class="ticker-item"><img src="Imagens/icon-gamemaker.png" alt="GameMaker Icon">GML</div>
-                    <div class="ticker-item"><img src="Imagens/icon-blender.png" alt="Blender Icon">Blender</div>
-                    <div class="ticker-item"><img src="Imagens/icon-figma.png" alt="Figma Icon">Figma</div>
-                    <div class="ticker-item"><img src="Imagens/icon-HTML5.png" alt="HTML Icon">HTML</div>
-                    <div class="ticker-item"><img src="Imagens/icon-CSS3.png" alt="CSS Icon">CSS</div>
-                    <div class="ticker-item"><img src="Imagens/icon-JavaScript.png" alt="JavaScript Icon">JavaScript</div>
-                    <div class="ticker-item"><img src="Imagens/icon-python.png" alt="Python Icon">Python</div>
-                    <div class="ticker-item"><img src="Imagens/icon-java.png" alt="Java icon">Java</div>
-                    <div class="ticker-item"><img src="Imagens/icon-Visual-Studio.png" alt="Visual Studio Icon">Visual Studio</div>
-                    <div class="ticker-item"><img src="Imagens/icon-Visual-Studio-Code.png" alt="VS Code Icon">VS Code</div>
-                    <div class="ticker-item"><img src="Imagens/icon-github.png" alt="Github Icon">Github</div>
-                    <div class="ticker-item"><img src="Imagens/icon-git.png" alt="Git Icon">Git</div>
-                    <div class="ticker-item"><img src="Imagens/icon-mysql.png" alt="MySQL Icon">MySQL</div>
-                    <div class="ticker-item"><img src="Imagens/icon-SQL-Server.png" alt="SQL Server Icon">SQL Server</div>
+        </div>
+        <div class="hero-scroll">
+            <span>scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
 
-                    <!-- DUPLICAÇÃO PARA LOOP -->
-                    <div class="ticker-item"><img src="Imagens/icon-powerbi.png" alt="Power BI Icon"> Power BI </div>
-                    <div class="ticker-item"><img src="Imagens/icon-R.png" alt="Power BI Icon" id="R"> Linguagem R </div>
-                    <div class="ticker-item"><img src="Imagens/icon-unity.png" alt="Unity Icon">Unity</div>
-                    <div class="ticker-item"><img src="Imagens/icon-gamemaker.png" alt="GameMaker Icon">GML</div>
-                    <div class="ticker-item"><img src="Imagens/icon-blender.png" alt="Blender Icon">Blender</div>
-                    <div class="ticker-item"><img src="Imagens/icon-figma.png" alt="Figma Icon">Figma</div>
-                    <div class="ticker-item"><img src="Imagens/icon-HTML5.png" alt="HTML Icon">HTML</div>
-                    <div class="ticker-item"><img src="Imagens/icon-CSS3.png" alt="CSS Icon">CSS</div>
-                    <div class="ticker-item"><img src="Imagens/icon-JavaScript.png" alt="JavaScript Icon">JavaScript</div>
-                    <div class="ticker-item"><img src="Imagens/icon-python.png" alt="Python Icon">Python</div>
-                    <div class="ticker-item"><img src="Imagens/icon-java.png" alt="Java icon">Java</div>
-                    <div class="ticker-item"><img src="Imagens/icon-Visual-Studio.png" alt="Visual Studio Icon">Visual Studio</div>
-                    <div class="ticker-item"><img src="Imagens/icon-Visual-Studio-Code.png" alt="VS Code Icon">VS Code</div>
-                    <div class="ticker-item"><img src="Imagens/icon-github.png" alt="Github Icon">Github</div>
-                    <div class="ticker-item"><img src="Imagens/icon-git.png" alt="Git Icon">Git</div>
-                    <div class="ticker-item"><img src="Imagens/icon-mysql.png" alt="MySQL Icon">MySQL</div>
-                    <div class="ticker-item"><img src="Imagens/icon-SQL-Server.png" alt="SQL Server Icon">SQL Server</div>
+    <!-- SOBRE -->
+    <section class="section sobre" id="sobre">
+        <div class="container">
+            <div class="section-label reveal">01 / sobre</div>
+            <div class="sobre-grid">
+                <div class="sobre-text reveal">
+                    <h2>Olá, <span class="accent">Leitor</span></h2>
+                    <p>
+                        Sou profissional na área de dados com experiência prática em 
+                        <strong>qualidade de dados</strong>, <strong>automação de processos</strong> e 
+                        <strong>gestão de bases cadastrais</strong> em ambiente ERP. Atuei na Krambeck Auto Peças 
+                        com foco em coleta, tratamento, validação e higienização de dados de produtos automotivos 
+                        a partir de fontes estruturadas e não estruturadas.
+                    </p>
+                    <p>
+                        Desenvolvi <strong>automações RPA</strong> com Python (Pywinauto e Selenium) para eliminação de 
+                        tarefas manuais repetitivas, aumentando a eficiência operacional do setor de compras.
+                    </p>
+                    <p>
+                        O que me diferencia? Além do conhecimento técnico, participo do grupo teatral de 
+                        <strong>improviso</strong> — que me ensinou comunicação clara, trabalho em equipe, 
+                        adaptação rápida e a arte de contar histórias com dados.
+                    </p>
+                    <div class="sobre-links">
+                        <a href="https://github.com/Aram-Bohmann" target="_blank" class="inline-link">GitHub ↗</a>
+                        <a href="mailto:arambohmannleitedaluz@gmail.com" class="inline-link">Email ↗</a>
+                    </div>
+                </div>
+                <div class="sobre-card reveal delay-1">
+                    <div class="sobre-photo-wrap">
+                        <img src="Imagens/foto-aram.png" alt="Foto de Aram" class="sobre-photo">
+                        <div class="sobre-photo-border"></div>
+                    </div>
+                    <div class="sobre-info">
+                        <p class="sobre-name">Aram Bohmann Leite da Luz</p>
+                        <div class="sobre-roles">
+                            <span>Data Scientist</span>
+                            <span>Data Engineer</span>
+                            <span>Data Analyst</span>
+                        </div>
+                        <div class="sobre-badges">
+                            <span class="badge">🎭 Improvisador</span>
+                            <span class="badge">🎓 UNINTER 2026–28</span>
+                            <span class="badge">📍 SC, Brasil</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projetos -->
-    <section class="projetos">
-        <div class="interface">
-            <div class="elemento-escondido">
-                <h2 class="projetos-titulo">Projetos</h2>
-                <br>
-                <div style="display: flex; justify-content: center;">
-                    <hr>
+    <!-- STACK TÉCNICA -->
+    <section class="section stack" id="stack">
+        <div class="container">
+            <div class="section-label reveal">02 / stack técnica</div>
+            <h2 class="section-title reveal">Ferramentas & <span class="accent">Tecnologias</span></h2>
+
+            <div class="stack-grid reveal delay-1">
+                <div class="stack-group">
+                    <div class="stack-group-label">Linguagens</div>
+                    <div class="stack-items">
+                        <div class="stack-item"><img src="Imagens/icon-python.png" alt="Python">Python</div>
+                        <div class="stack-item"><img src="Imagens/icon-R.png" alt="R" id="R">Linguagem R</div>
+                        <div class="stack-item"><img src="Imagens/icon-java.png" alt="Java">Java</div>
+                        <div class="stack-item"><img src="Imagens/icon-JavaScript.png" alt="JS">JavaScript</div>
+                        <div class="stack-item"><img src="Imagens/icon-HTML5.png" alt="HTML">HTML</div>
+                        <div class="stack-item"><img src="Imagens/icon-CSS3.png" alt="CSS">CSS</div>
+                    </div>
+                </div>
+                <div class="stack-group">
+                    <div class="stack-group-label">Bancos de Dados</div>
+                    <div class="stack-items">
+                        <div class="stack-item"><img src="Imagens/icon-mysql.png" alt="MySQL">MySQL</div>
+                        <div class="stack-item"><img src="Imagens/icon-SQL-Server.png" alt="SQL Server">SQL Server</div>
+                        <div class="stack-item"><span class="icon-text">🐘</span>PostgreSQL</div>
+                        <div class="stack-item"><span class="icon-text">🍃</span>MongoDB</div>
+                        <div class="stack-item"><span class="icon-text">⚡</span>NoSQL</div>
+                    </div>
+                </div>
+                <div class="stack-group">
+                    <div class="stack-group-label">Visualização & BI</div>
+                    <div class="stack-items">
+                        <div class="stack-item"><img src="Imagens/icon-powerbi.png" alt="Power BI">Power BI</div>
+                        <div class="stack-item"><span class="icon-text">📊</span>Tableau</div>
+                        <div class="stack-item"><span class="icon-text">🎯</span>Streamlit</div>
+                    </div>
+                </div>
+                <div class="stack-group">
+                    <div class="stack-group-label">Big Data & Cloud</div>
+                    <div class="stack-items">
+                        <div class="stack-item"><span class="icon-text">⚡</span>Spark</div>
+                        <div class="stack-item"><span class="icon-text">🐘</span>Hadoop</div>
+                        <div class="stack-item"><span class="icon-text">☁️</span>AWS</div>
+                        <div class="stack-item"><span class="icon-text">🔷</span>Azure</div>
+                        <div class="stack-item"><span class="icon-text">🟡</span>GCP</div>
+                    </div>
+                </div>
+                <div class="stack-group">
+                    <div class="stack-group-label">IA & LLMs</div>
+                    <div class="stack-items">
+                        <div class="stack-item"><span class="icon-text">🦜</span>LangChain</div>
+                        <div class="stack-item"><span class="icon-text">🤗</span>Hugging Face</div>
+                        <div class="stack-item"><span class="icon-text">🤖</span>OpenAI API</div>
+                        <div class="stack-item"><span class="icon-text">🦙</span>Ollama</div>
+                        <div class="stack-item"><span class="icon-text">📈</span>MLflow</div>
+                    </div>
+                </div>
+                <div class="stack-group">
+                    <div class="stack-group-label">DevOps & Ferramentas</div>
+                    <div class="stack-items">
+                        <div class="stack-item"><img src="Imagens/icon-git.png" alt="Git">Git</div>
+                        <div class="stack-item"><img src="Imagens/icon-github.png" alt="GitHub">GitHub</div>
+                        <div class="stack-item"><img src="Imagens/icon-Visual-Studio-Code.png" alt="VS Code">VS Code</div>
+                        <div class="stack-item"><img src="Imagens/icon-figma.png" alt="Figma">Figma</div>
+                        <div class="stack-item"><span class="icon-text">🔍</span>Elasticsearch</div>
+                    </div>
                 </div>
             </div>
-            
-            <!-- Stats de projetos -->
-            <div class="elemento-escondido proj-stats">
-                <div class="proj-stat-item">
-                    <span class="proj-stat-num">14</span>
-                    <span class="proj-stat-label">Projetos</span>
+
+            <!-- Ticker -->
+            <div class="ticker-wrap reveal delay-2">
+                <div class="ticker-track">
+                    <span>Python</span><span class="sep">·</span>
+                    <span>Power BI</span><span class="sep">·</span>
+                    <span>Machine Learning</span><span class="sep">·</span>
+                    <span>ETL / ELT</span><span class="sep">·</span>
+                    <span>SQL</span><span class="sep">·</span>
+                    <span>Spark</span><span class="sep">·</span>
+                    <span>LangChain</span><span class="sep">·</span>
+                    <span>Streamlit</span><span class="sep">·</span>
+                    <span>AWS</span><span class="sep">·</span>
+                    <span>MongoDB</span><span class="sep">·</span>
+                    <span>R</span><span class="sep">·</span>
+                    <span>MLflow</span><span class="sep">·</span>
+                    <span>RPA</span><span class="sep">·</span>
+                    <span>Tableau</span><span class="sep">·</span>
+                    <!-- duplicate -->
+                    <span>Python</span><span class="sep">·</span>
+                    <span>Power BI</span><span class="sep">·</span>
+                    <span>Machine Learning</span><span class="sep">·</span>
+                    <span>ETL / ELT</span><span class="sep">·</span>
+                    <span>SQL</span><span class="sep">·</span>
+                    <span>Spark</span><span class="sep">·</span>
+                    <span>LangChain</span><span class="sep">·</span>
+                    <span>Streamlit</span><span class="sep">·</span>
+                    <span>AWS</span><span class="sep">·</span>
+                    <span>MongoDB</span><span class="sep">·</span>
+                    <span>R</span><span class="sep">·</span>
+                    <span>MLflow</span><span class="sep">·</span>
+                    <span>RPA</span><span class="sep">·</span>
+                    <span>Tableau</span><span class="sep">·</span>
                 </div>
-                <div class="proj-stat-divider"></div>
-                <div class="proj-stat-item">
-                    <span class="proj-stat-num">8</span>
-                    <span class="proj-stat-label">Tecnologias</span>
-                </div>
-                <div class="proj-stat-divider"></div>
-                <div class="proj-stat-item">
-                    <span class="proj-stat-num">3</span>
-                    <span class="proj-stat-label">Disponíveis Online</span>
-                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJETOS -->
+    <section class="section projetos" id="projetos">
+        <div class="container">
+            <div class="section-label reveal">03 / projetos</div>
+            <h2 class="section-title reveal">Projetos em <span class="accent">Destaque</span></h2>
+
+            <div class="proj-meta reveal delay-1">
+                <div class="proj-stat"><span>14</span> projetos</div>
+                <div class="proj-stat"><span>3</span> online</div>
+                <div class="proj-stat"><span>8</span> tecnologias</div>
             </div>
 
             <!-- Filtros -->
-            <div class="elemento-escondido proj-filtros">
-                <button class="proj-filtro-btn active" data-filtro="todos">Todos</button>
-                <button class="proj-filtro-btn" data-filtro="python">Python</button>
-                <button class="proj-filtro-btn" data-filtro="r">Linguagem R</button>
-                <button class="proj-filtro-btn" data-filtro="ml">Machine Learning</button>
-                <button class="proj-filtro-btn" data-filtro="web">Web & Mobile</button>
-                <button class="proj-filtro-btn" data-filtro="games">Games</button>
-                <button class="proj-filtro-btn" data-filtro="dados">Dados & SQL</button>
+            <div class="filtros reveal delay-1">
+                <button class="filtro active" data-f="todos">Todos</button>
+                <button class="filtro" data-f="python">Python</button>
+                <button class="filtro" data-f="r">R</button>
+                <button class="filtro" data-f="ml">ML</button>
+                <button class="filtro" data-f="web">Web</button>
+                <button class="filtro" data-f="games">Games</button>
+                <button class="filtro" data-f="dados">Dados & SQL</button>
             </div>
-            
-            <!-- Grid de projetos -->
-            <div class="elemento-escondido proj-grid" id="proj-grid">
-                <!-- SQL Chat Autopeça -->
-                <div class="proj-card" data-categoria="web dados">
-                    <div class="proj-card-img">
-                        <img src="Imagens/Captura de tela 2026-04-05 154630.png" alt="autopecas-sql-chat">
-                        <div class="proj-card-overlay">
-                            <a href="https://github.com/Aram-Bohmann/autopecas-sql-chat" target="_blank" class="proj-overlay-btn">Ver Código</a>
-                        </div>
-                    </div>
-                    <div class="proj-card-body">
-                        <div class="proj-tags">
-                            <span class="proj-tag proj-tag-dados">SQL</span>
-                            <span class="proj-tag proj-tag-python">Python</span>
-                            <span class="proj-tag proj-tag-web">Web</span>
-                            <span class="proj-tag proj-tag-dados">Análise de Dados</span>
-                        </div>
-                        <h3 class="proj-titulo">SQL Chat Autopeça</h3>
-                        <div class="proj-links">
-                            <a href="https://github.com/Aram-Bohmann/autopecas-sql-chat" target="_blank" class="proj-link">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-                                Código
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- TCC Literatura -->
-                <div class="proj-card" data-categoria="web dados">
-                    <div class="proj-card-img">
-                        <img src="Imagens/projeto-10.png" alt="TCC Aplicação Móvel de Literatura Digital">
-                        <div class="proj-card-overlay">
-                            <a href="https://github.com/Aram-Bohmann/TCC-Aplicacao-Movel-de-Literatura-Digital" target="_blank" class="proj-overlay-btn">Ver Código</a>
-                        </div>
-                    </div>
-                    <div class="proj-card-body">
-                        <div class="proj-tags">
-                            <span class="proj-tag proj-tag-dados">SQL</span>
-                            <span class="proj-tag proj-tag-web">Web</span>
-                        </div>
-                        <h3 class="proj-titulo">TCC — Aplicação Móvel de Literatura Digital</h3>
-                        <div class="proj-links">
-                            <a href="https://github.com/Aram-Bohmann/TCC-Aplicacao-Movel-de-Literatura-Digital" target="_blank" class="proj-link">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-                                Código
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Busca Inteligente Autopeças -->
-                <div class="proj-card" data-categoria="python web dados">
-                    <div class="proj-card-img">
-                        <img src="Imagens/busca-autopecas.png" alt="Sistema de Busca Inteligente Autopeças">
-                        <div class="proj-card-overlay">
-                            <a href="https://github.com/Aram-Bohmann/Sistema-de-busca-inteligente-para-estoque-de-autopecas" target="_blank" class="proj-overlay-btn">Ver Código</a>
-                        </div>
-                    </div>
-                    <div class="proj-card-body">
-                        <div class="proj-tags">
-                            <span class="proj-tag proj-tag-python">Python</span>
-                            <span class="proj-tag proj-tag-web">Web</span>
-                            <span class="proj-tag proj-tag-dados">Elasticsearch</span>
-                        </div>
-                        <h3 class="proj-titulo">Sistema de Busca Inteligente — Autopeças</h3>
-                        <div class="proj-links">
-                            <a href="https://github.com/Aram-Bohmann/Sistema-de-busca-inteligente-para-estoque-de-autopecas" target="_blank" class="proj-link">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-                                Código
-                            </a>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Inventário Autopeças -->
-                <div class="proj-card" data-categoria="python web">
-                    <div class="proj-card-img">
-                        <img src="Imagens/inventario.png" alt="Sistema de Inventário de Autopeças">
-                        <div class="proj-card-overlay">
-                            <a href="https://github.com/Aram-Bohmann/Sistema-de-Inventario-de-Autope-as" target="_blank" class="proj-overlay-btn">Ver Código</a>
-                        </div>
-                    </div>
-                    <div class="proj-card-body">
-                        <div class="proj-tags">
-                            <span class="proj-tag proj-tag-python">Python</span>
-                            <span class="proj-tag proj-tag-web">Web</span>
-                        </div>
-                        <h3 class="proj-titulo">Sistema de Inventário de Autopeças</h3>
-                        <div class="proj-links">
-                            <a href="https://github.com/Aram-Bohmann/Sistema-de-Inventario-de-Autope-as" target="_blank" class="proj-link">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-                                Código
-                            </a>
-                        </div>
-                    </div>
-                </div>
+            <div class="proj-grid" id="projGrid">
 
-                <!-- Modelo Preditivo Livros -->
-                <div class="proj-card" data-categoria="python ml">
-                    <div class="proj-card-img">
-                        <img src="Imagens/projeto-9.png" alt="Modelo Preditivo de Preços de Livros">
-                        <div class="proj-card-overlay">
-                            <a href="https://github.com/Aram-Bohmann/Modelo-Preditivo-de-Precos-de-Livros-e-Visualizacoes" target="_blank" class="proj-overlay-btn">Ver Código</a>
-                        </div>
-                    </div>
-                    <div class="proj-card-body">
-                        <div class="proj-tags">
-                            <span class="proj-tag proj-tag-python">Python</span>
-                            <span class="proj-tag proj-tag-ml">Machine Learning</span>
-                        </div>
-                        <h3 class="proj-titulo">Modelo Preditivo de Preços de Livros</h3>
-                        <div class="proj-links">
-                            <a href="https://github.com/Aram-Bohmann/Modelo-Preditivo-de-Precos-de-Livros-e-Visualizacoes" target="_blank" class="proj-link">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-                                Código
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Dashboard Salários — DESTAQUE (online) -->
-                <div class="proj-card proj-card-destaque" data-categoria="python dados">
-                    <div class="proj-card-img">
+                <!-- Dashboard Salários — DESTAQUE -->
+                <div class="proj-card featured" data-cat="python dados">
+                    <div class="proj-img">
                         <img src="Imagens/projeto-1.png" alt="Dashboard de Análise de Salários">
-                        <div class="proj-card-overlay">
-                            <a href="https://dashboard-salaries-python-2025-aram.streamlit.app" target="_blank" class="proj-overlay-btn">Acessar Site</a>
-                            <a href="https://github.com/Aram-Bohmann/Dashboard-Salaries-Python" target="_blank" class="proj-overlay-btn proj-overlay-btn-sec">Ver Código</a>
+                        <div class="proj-hover">
+                            <a href="https://dashboard-salaries-python-2025-aram.streamlit.app" target="_blank" class="phover-btn">Acessar ↗</a>
+                            <a href="https://github.com/Aram-Bohmann/Dashboard-Salaries-Python" target="_blank" class="phover-btn outline">GitHub</a>
                         </div>
-                        <span class="proj-badge-live">● Online</span>
+                        <div class="live-badge">● Live</div>
                     </div>
-                    <div class="proj-card-body">
+                    <div class="proj-body">
                         <div class="proj-tags">
-                            <span class="proj-tag proj-tag-python">Python</span>
-                            <span class="proj-tag proj-tag-dados">Análise de Dados</span>
+                            <span class="tag tag-python">Python</span>
+                            <span class="tag tag-dados">Análise de Dados</span>
+                            <span class="tag tag-dados">Streamlit</span>
                         </div>
-                        <h3 class="proj-titulo">Dashboard de Análise de Salários na Área de Dados</h3>
-                        <div class="proj-links">
-                            <a href="https://dashboard-salaries-python-2025-aram.streamlit.app" target="_blank" class="proj-link proj-link-primary">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                                Acessar
-                            </a>
-                            <a href="https://github.com/Aram-Bohmann/Dashboard-Salaries-Python" target="_blank" class="proj-link">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-                                Código
-                            </a>
+                        <h3>Dashboard de Análise de Salários na Área de Dados</h3>
+                        <div class="proj-footer">
+                            <a href="https://dashboard-salaries-python-2025-aram.streamlit.app" target="_blank" class="plink primary">Acessar →</a>
+                            <a href="https://github.com/Aram-Bohmann/Dashboard-Salaries-Python" target="_blank" class="plink">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SQL Chat Autopeça -->
+                <div class="proj-card" data-cat="python dados web">
+                    <div class="proj-img">
+                        <img src="Imagens/Captura de tela 2026-04-05 154630.png" alt="SQL Chat Autopeça">
+                        <div class="proj-hover">
+                            <a href="https://github.com/Aram-Bohmann/autopecas-sql-chat" target="_blank" class="phover-btn">GitHub ↗</a>
+                        </div>
+                    </div>
+                    <div class="proj-body">
+                        <div class="proj-tags">
+                            <span class="tag tag-dados">SQL</span>
+                            <span class="tag tag-python">Python</span>
+                            <span class="tag tag-web">Web</span>
+                        </div>
+                        <h3>SQL Chat Autopeça</h3>
+                        <div class="proj-footer">
+                            <a href="https://github.com/Aram-Bohmann/autopecas-sql-chat" target="_blank" class="plink">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Busca Inteligente Autopeças -->
+                <div class="proj-card" data-cat="python dados web">
+                    <div class="proj-img">
+                        <img src="Imagens/busca-autopecas.png" alt="Sistema de Busca Inteligente">
+                        <div class="proj-hover">
+                            <a href="https://github.com/Aram-Bohmann/Sistema-de-busca-inteligente-para-estoque-de-autopecas" target="_blank" class="phover-btn">GitHub ↗</a>
+                        </div>
+                    </div>
+                    <div class="proj-body">
+                        <div class="proj-tags">
+                            <span class="tag tag-python">Python</span>
+                            <span class="tag tag-dados">Elasticsearch</span>
+                            <span class="tag tag-web">Web</span>
+                        </div>
+                        <h3>Sistema de Busca Inteligente — Autopeças</h3>
+                        <div class="proj-footer">
+                            <a href="https://github.com/Aram-Bohmann/Sistema-de-busca-inteligente-para-estoque-de-autopecas" target="_blank" class="plink">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Seraph's Last Stand — DESTAQUE -->
+                <div class="proj-card featured" data-cat="games">
+                    <div class="proj-img">
+                        <img src="Imagens/projeto-5.png" alt="Seraph's Last Stand">
+                        <div class="proj-hover">
+                            <a href="https://gx.games/pt-br/games/i7z7g9/jogo-parodia-seraphs-last-stand/tracks/948d9974-6aa1-45f0-b498-7db0ad0154b9" target="_blank" class="phover-btn">Jogar ↗</a>
+                            <a href="https://github.com/Aram-Bohmann/Jogo-Parodia-Seraphs-Last-Stand" target="_blank" class="phover-btn outline">GitHub</a>
+                        </div>
+                        <div class="live-badge">● Live</div>
+                    </div>
+                    <div class="proj-body">
+                        <div class="proj-tags">
+                            <span class="tag tag-games">GML</span>
+                            <span class="tag tag-games">Game Design</span>
+                        </div>
+                        <h3>Jogo Paródia — Seraph's Last Stand</h3>
+                        <div class="proj-footer">
+                            <a href="https://gx.games/pt-br/games/i7z7g9/jogo-parodia-seraphs-last-stand/tracks/948d9974-6aa1-45f0-b498-7db0ad0154b9" target="_blank" class="plink primary">Jogar →</a>
+                            <a href="https://github.com/Aram-Bohmann/Jogo-Parodia-Seraphs-Last-Stand" target="_blank" class="plink">GitHub</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Chatbot Offline -->
-                <div class="proj-card" data-categoria="python ml">
-                    <div class="proj-card-img">
+                <div class="proj-card" data-cat="python ml">
+                    <div class="proj-img">
                         <img src="Imagens/chatbot.png" alt="Chatbot Offline">
-                        <div class="proj-card-overlay">
-                            <a href="https://github.com/Aram-Bohmann/ChatBot-Offline-Gwen/tree/main" target="_blank" class="proj-overlay-btn">Ver Código</a>
+                        <div class="proj-hover">
+                            <a href="https://github.com/Aram-Bohmann/ChatBot-Offline-Gwen/tree/main" target="_blank" class="phover-btn">GitHub ↗</a>
                         </div>
                     </div>
-                    <div class="proj-card-body">
+                    <div class="proj-body">
                         <div class="proj-tags">
-                            <span class="proj-tag proj-tag-python">Python</span>
-                            <span class="proj-tag proj-tag-ml">Machine Learning</span>
+                            <span class="tag tag-python">Python</span>
+                            <span class="tag tag-ml">Machine Learning</span>
                         </div>
-                        <h3 class="proj-titulo">Chatbot Offline</h3>
-                        <div class="proj-links">
-                            <a href="https://github.com/Aram-Bohmann/ChatBot-Offline-Gwen/tree/main" target="_blank" class="proj-link">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-                                Código
-                            </a>
+                        <h3>Chatbot Offline</h3>
+                        <div class="proj-footer">
+                            <a href="https://github.com/Aram-Bohmann/ChatBot-Offline-Gwen/tree/main" target="_blank" class="plink">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modelo Preditivo Livros -->
+                <div class="proj-card" data-cat="python ml">
+                    <div class="proj-img">
+                        <img src="Imagens/projeto-9.png" alt="Modelo Preditivo de Preços de Livros">
+                        <div class="proj-hover">
+                            <a href="https://github.com/Aram-Bohmann/Modelo-Preditivo-de-Precos-de-Livros-e-Visualizacoes" target="_blank" class="phover-btn">GitHub ↗</a>
+                        </div>
+                    </div>
+                    <div class="proj-body">
+                        <div class="proj-tags">
+                            <span class="tag tag-python">Python</span>
+                            <span class="tag tag-ml">Machine Learning</span>
+                        </div>
+                        <h3>Modelo Preditivo de Preços de Livros</h3>
+                        <div class="proj-footer">
+                            <a href="https://github.com/Aram-Bohmann/Modelo-Preditivo-de-Precos-de-Livros-e-Visualizacoes" target="_blank" class="plink">GitHub</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Diabetes R -->
-                <div class="proj-card" data-categoria="r ml">
-                    <div class="proj-card-img">
-                        <img src="Imagens/projeto-2.png" alt="Prevendo a Ocorrência de Diabetes">
-                        <div class="proj-card-overlay">
-                            <a href="https://github.com/Aram-Bohmann/Prevendo-a-ocorrencia-de-diabetes-Linguagem-R" target="_blank" class="proj-overlay-btn">Ver Código</a>
+                <div class="proj-card" data-cat="r ml">
+                    <div class="proj-img">
+                        <img src="Imagens/projeto-2.png" alt="Prevendo Diabetes">
+                        <div class="proj-hover">
+                            <a href="https://github.com/Aram-Bohmann/Prevendo-a-ocorrencia-de-diabetes-Linguagem-R" target="_blank" class="phover-btn">GitHub ↗</a>
                         </div>
                     </div>
-                    <div class="proj-card-body">
+                    <div class="proj-body">
                         <div class="proj-tags">
-                            <span class="proj-tag proj-tag-r">Linguagem R</span>
-                            <span class="proj-tag proj-tag-ml">Machine Learning</span>
+                            <span class="tag tag-r">Linguagem R</span>
+                            <span class="tag tag-ml">Machine Learning</span>
                         </div>
-                        <h3 class="proj-titulo">Prevendo a Ocorrência de Diabetes</h3>
-                        <div class="proj-links">
-                            <a href="https://github.com/Aram-Bohmann/Prevendo-a-ocorrencia-de-diabetes-Linguagem-R" target="_blank" class="proj-link">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-                                Código
-                            </a>
+                        <h3>Prevendo a Ocorrência de Diabetes</h3>
+                        <div class="proj-footer">
+                            <a href="https://github.com/Aram-Bohmann/Prevendo-a-ocorrencia-de-diabetes-Linguagem-R" target="_blank" class="plink">GitHub</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Diagramas EER -->
-                <div class="proj-card" data-categoria="dados">
-                    <div class="proj-card-img">
-                        <img src="Imagens/projeto-6.png" alt="Praticando Diagramas EER">
-                        <div class="proj-card-overlay">
-                            <a href="https://github.com/Aram-Bohmann/Praticando-Diagramas-EER/tree/main" target="_blank" class="proj-overlay-btn">Ver Código</a>
+                <!-- Flappy Bird -->
+                <div class="proj-card featured" data-cat="games">
+                    <div class="proj-img">
+                        <img src="Imagens/projeto-8.png" alt="Flappy Bird">
+                        <div class="proj-hover">
+                            <a href="https://gx.games/games/iiwsj4/flappy-bird-recriacao/tracks/0ad90754-14e2-46f4-9a70-17e31d36f930/" target="_blank" class="phover-btn">Jogar ↗</a>
+                            <a href="https://github.com/Aram-Bohmann/Flappy-Bird" target="_blank" class="phover-btn outline">GitHub</a>
+                        </div>
+                        <div class="live-badge">● Live</div>
+                    </div>
+                    <div class="proj-body">
+                        <div class="proj-tags">
+                            <span class="tag tag-games">GML</span>
+                            <span class="tag tag-games">Game Design</span>
+                        </div>
+                        <h3>Flappy Bird — Recriação</h3>
+                        <div class="proj-footer">
+                            <a href="https://gx.games/games/iiwsj4/flappy-bird-recriacao/tracks/0ad90754-14e2-46f4-9a70-17e31d36f930/" target="_blank" class="plink primary">Jogar →</a>
+                            <a href="https://github.com/Aram-Bohmann/Flappy-Bird" target="_blank" class="plink">GitHub</a>
                         </div>
                     </div>
-                    <div class="proj-card-body">
-                        <div class="proj-tags">
-                            <span class="proj-tag proj-tag-dados">Modelagem</span>
-                            <span class="proj-tag proj-tag-dados">MySQL</span>
+                </div>
+
+                <!-- Inventário Autopeças -->
+                <div class="proj-card" data-cat="python web">
+                    <div class="proj-img">
+                        <img src="Imagens/inventario.png" alt="Inventário Autopeças">
+                        <div class="proj-hover">
+                            <a href="https://github.com/Aram-Bohmann/Sistema-de-Inventario-de-Autope-as" target="_blank" class="phover-btn">GitHub ↗</a>
                         </div>
-                        <h3 class="proj-titulo">Praticando Diagramas EER</h3>
-                        <div class="proj-links">
-                            <a href="https://github.com/Aram-Bohmann/Praticando-Diagramas-EER/tree/main" target="_blank" class="proj-link">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-                                Código
-                            </a>
+                    </div>
+                    <div class="proj-body">
+                        <div class="proj-tags">
+                            <span class="tag tag-python">Python</span>
+                            <span class="tag tag-web">Web</span>
+                        </div>
+                        <h3>Sistema de Inventário de Autopeças</h3>
+                        <div class="proj-footer">
+                            <a href="https://github.com/Aram-Bohmann/Sistema-de-Inventario-de-Autope-as" target="_blank" class="plink">GitHub</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Viagens R -->
-                <div class="proj-card" data-categoria="r dados">
-                    <div class="proj-card-img">
-                        <img src="Imagens/projeto-3.png" alt="Análise de Dados de Viagens a Serviço">
-                        <div class="proj-card-overlay">
-                            <a href="https://github.com/Aram-Bohmann/Analisando-dados-ViagensServico-Linguagem-R/tree/main" target="_blank" class="proj-overlay-btn">Ver Código</a>
+                <div class="proj-card" data-cat="r dados">
+                    <div class="proj-img">
+                        <img src="Imagens/projeto-3.png" alt="Viagens a Serviço">
+                        <div class="proj-hover">
+                            <a href="https://github.com/Aram-Bohmann/Analisando-dados-ViagensServico-Linguagem-R/tree/main" target="_blank" class="phover-btn">GitHub ↗</a>
                         </div>
                     </div>
-                    <div class="proj-card-body">
+                    <div class="proj-body">
                         <div class="proj-tags">
-                            <span class="proj-tag proj-tag-r">Linguagem R</span>
-                            <span class="proj-tag proj-tag-dados">Análise de Dados</span>
+                            <span class="tag tag-r">Linguagem R</span>
+                            <span class="tag tag-dados">Análise de Dados</span>
                         </div>
-                        <h3 class="proj-titulo">Análise de Dados abertos de Viagens a Serviço</h3>
-                        <div class="proj-links">
-                            <a href="https://github.com/Aram-Bohmann/Analisando-dados-ViagensServico-Linguagem-R/tree/main" target="_blank" class="proj-link">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-                                Código
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- App Literatura -->
-                <div class="proj-card" data-categoria="web">
-                    <div class="proj-card-img">
-                        <img src="Imagens/projeto-7.png" alt="App de Literatura Digital">
-                        <div class="proj-card-overlay">
-                            <a href="https://github.com/Aram-Bohmann/App-de-Literatura" target="_blank" class="proj-overlay-btn">Ver Código</a>
-                        </div>
-                    </div>
-                    <div class="proj-card-body">
-                        <div class="proj-tags">
-                            <span class="proj-tag proj-tag-web">Cordova</span>
-                            <span class="proj-tag proj-tag-web">Dev Web</span>
-                        </div>
-                        <h3 class="proj-titulo">App de Literatura Digital</h3>
-                        <div class="proj-links">
-                            <a href="https://github.com/Aram-Bohmann/App-de-Literatura" target="_blank" class="proj-link">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-                                Código
-                            </a>
+                        <h3>Análise de Dados de Viagens a Serviço</h3>
+                        <div class="proj-footer">
+                            <a href="https://github.com/Aram-Bohmann/Analisando-dados-ViagensServico-Linguagem-R/tree/main" target="_blank" class="plink">GitHub</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- PIB Per Capita -->
-                <div class="proj-card" data-categoria="python dados">
-                    <div class="proj-card-img">
-                        <img src="Imagens/pib_per_capita.png" alt="Gráfico de Corrida PIB Per Capita">
-                        <div class="proj-card-overlay">
-                            <a href="https://github.com/Aram-Bohmann/Grafico-de-Corrida-PIB-Per-Capita" target="_blank" class="proj-overlay-btn">Ver Código</a>
+                <div class="proj-card" data-cat="python dados">
+                    <div class="proj-img">
+                        <img src="Imagens/pib_per_capita.png" alt="PIB Per Capita">
+                        <div class="proj-hover">
+                            <a href="https://github.com/Aram-Bohmann/Grafico-de-Corrida-PIB-Per-Capita" target="_blank" class="phover-btn">GitHub ↗</a>
                         </div>
                     </div>
-                    <div class="proj-card-body">
+                    <div class="proj-body">
                         <div class="proj-tags">
-                            <span class="proj-tag proj-tag-python">Python</span>
-                            <span class="proj-tag proj-tag-dados">Análise de Dados</span>
+                            <span class="tag tag-python">Python</span>
+                            <span class="tag tag-dados">Análise de Dados</span>
                         </div>
-                        <h3 class="proj-titulo">Gráfico de Corrida — PIB Per Capita</h3>
-                        <div class="proj-links">
-                            <a href="https://github.com/Aram-Bohmann/Grafico-de-Corrida-PIB-Per-Capita" target="_blank" class="proj-link">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-                                Código
-                            </a>
+                        <h3>Gráfico de Corrida — PIB Per Capita</h3>
+                        <div class="proj-footer">
+                            <a href="https://github.com/Aram-Bohmann/Grafico-de-Corrida-PIB-Per-Capita" target="_blank" class="plink">GitHub</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Seraph's Last Stand — DESTAQUE (online) -->
-                <div class="proj-card proj-card-destaque" data-categoria="games">
-                    <div class="proj-card-img">
-                        <img src="Imagens/projeto-5.png" alt="Jogo Paródia Seraph's Last Stand">
-                        <div class="proj-card-overlay">
-                            <a href="https://gx.games/pt-br/games/i7z7g9/jogo-parodia-seraphs-last-stand/tracks/948d9974-6aa1-45f0-b498-7db0ad0154b9" target="_blank" class="proj-overlay-btn">Jogar</a>
-                            <a href="https://github.com/Aram-Bohmann/Jogo-Parodia-Seraphs-Last-Stand" target="_blank" class="proj-overlay-btn proj-overlay-btn-sec">Ver Código</a>
+                <!-- TCC Literatura -->
+                <div class="proj-card" data-cat="web dados">
+                    <div class="proj-img">
+                        <img src="Imagens/projeto-10.png" alt="TCC Literatura">
+                        <div class="proj-hover">
+                            <a href="https://github.com/Aram-Bohmann/TCC-Aplicacao-Movel-de-Literatura-Digital" target="_blank" class="phover-btn">GitHub ↗</a>
                         </div>
-                        <span class="proj-badge-live">● Online</span>
                     </div>
-                    <div class="proj-card-body">
+                    <div class="proj-body">
                         <div class="proj-tags">
-                            <span class="proj-tag proj-tag-games">GML</span>
-                            <span class="proj-tag proj-tag-games">Game Designer</span>
+                            <span class="tag tag-dados">SQL</span>
+                            <span class="tag tag-web">Web</span>
                         </div>
-                        <h3 class="proj-titulo">Jogo Paródia — Seraph's Last Stand</h3>
-                        <div class="proj-links">
-                            <a href="https://gx.games/pt-br/games/i7z7g9/jogo-parodia-seraphs-last-stand/tracks/948d9974-6aa1-45f0-b498-7db0ad0154b9" target="_blank" class="proj-link proj-link-primary">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                                Jogar
-                            </a>
-                            <a href="https://github.com/Aram-Bohmann/Jogo-Parodia-Seraphs-Last-Stand" target="_blank" class="proj-link">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-                                Código
-                            </a>
+                        <h3>TCC — Aplicação Móvel de Literatura Digital</h3>
+                        <div class="proj-footer">
+                            <a href="https://github.com/Aram-Bohmann/TCC-Aplicacao-Movel-de-Literatura-Digital" target="_blank" class="plink">GitHub</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Flappy Bird — DESTAQUE (online) -->
-                <div class="proj-card proj-card-destaque" data-categoria="games">
-                    <div class="proj-card-img">
-                        <img src="Imagens/projeto-8.png" alt="Flappy Bird">
-                        <div class="proj-card-overlay">
-                            <a href="https://gx.games/games/iiwsj4/flappy-bird-recriacao/tracks/0ad90754-14e2-46f4-9a70-17e31d36f930/" target="_blank" class="proj-overlay-btn">Jogar</a>
-                            <a href="https://github.com/Aram-Bohmann/Flappy-Bird" target="_blank" class="proj-overlay-btn proj-overlay-btn-sec">Ver Código</a>
+                <!-- Diagramas EER -->
+                <div class="proj-card" data-cat="dados">
+                    <div class="proj-img">
+                        <img src="Imagens/projeto-6.png" alt="Diagramas EER">
+                        <div class="proj-hover">
+                            <a href="https://github.com/Aram-Bohmann/Praticando-Diagramas-EER/tree/main" target="_blank" class="phover-btn">GitHub ↗</a>
                         </div>
-                        <span class="proj-badge-live">● Online</span>
                     </div>
-                    <div class="proj-card-body">
+                    <div class="proj-body">
                         <div class="proj-tags">
-                            <span class="proj-tag proj-tag-games">GML</span>
-                            <span class="proj-tag proj-tag-games">Game Designer</span>
+                            <span class="tag tag-dados">Modelagem</span>
+                            <span class="tag tag-dados">MySQL</span>
                         </div>
-                        <h3 class="proj-titulo">Flappy Bird</h3>
-                        <div class="proj-links">
-                            <a href="https://gx.games/games/iiwsj4/flappy-bird-recriacao/tracks/0ad90754-14e2-46f4-9a70-17e31d36f930/" target="_blank" class="proj-link proj-link-primary">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                                Jogar
-                            </a>
-                            <a href="https://github.com/Aram-Bohmann/Flappy-Bird" target="_blank" class="proj-link">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-                                Código
-                            </a>
+                        <h3>Praticando Diagramas EER</h3>
+                        <div class="proj-footer">
+                            <a href="https://github.com/Aram-Bohmann/Praticando-Diagramas-EER/tree/main" target="_blank" class="plink">GitHub</a>
                         </div>
                     </div>
                 </div>
+
+                <!-- App Literatura -->
+                <div class="proj-card" data-cat="web">
+                    <div class="proj-img">
+                        <img src="Imagens/projeto-7.png" alt="App Literatura">
+                        <div class="proj-hover">
+                            <a href="https://github.com/Aram-Bohmann/App-de-Literatura" target="_blank" class="phover-btn">GitHub ↗</a>
+                        </div>
+                    </div>
+                    <div class="proj-body">
+                        <div class="proj-tags">
+                            <span class="tag tag-web">Cordova</span>
+                            <span class="tag tag-web">Web</span>
+                        </div>
+                        <h3>App de Literatura Digital</h3>
+                        <div class="proj-footer">
+                            <a href="https://github.com/Aram-Bohmann/App-de-Literatura" target="_blank" class="plink">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
             </div><!-- /proj-grid -->
-            <div class="proj-grid-fade" id="proj-fade"></div>
-            <button class="btn-ver-mais" id="btn-ver-mais-proj">
-                Ver mais projetos
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+
+            <div class="proj-fade" id="projFade"></div>
+            <button class="btn-mais" id="btnProjMais">
+                <span>Ver mais projetos</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
         </div>
     </section>
 
-    <hr class="separacao" id="experiencia">
-    <br><br>
-    <!-- Experiência Profissional -->
-    <section class="experiencia-profissional">
-        <div class="interface">
-            <div class="elemento-escondido">
-                <h2 class="experiencia-titulo">Experiência Profissional</h2>
-                <br>
-                <div style="display: flex; justify-content: center;"><hr></div>
-            </div>
+    <!-- EXPERIÊNCIA -->
+    <section class="section experiencia" id="experiencia">
+        <div class="container">
+            <div class="section-label reveal">04 / experiência</div>
+            <h2 class="section-title reveal">Experiência <span class="accent">Profissional</span></h2>
 
-            <div class="elemento-escondido">
-                <div class="timeline">
-
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="exp-card">
-                            <div class="exp-header">
-                                <div class="exp-empresa-info">
-                                    <span class="exp-badge">Emprego Atual</span>
-                                    <h3 class="exp-cargo">Auxiliar de Compras</h3>
-                                    <p class="exp-empresa">
-                                        <svg class="exp-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                                        </svg>
-                                        Krambeck Autopeças
-                                    </p>
-                                    <p class="exp-periodo">
-                                        <svg class="exp-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                                            <line x1="16" y1="2" x2="16" y2="6"></line>
-                                            <line x1="8" y1="2" x2="8" y2="6"></line>
-                                            <line x1="3" y1="10" x2="21" y2="10"></line>
-                                        </svg>
-                                        fev de 2026 – o momento &nbsp;·&nbsp;
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="exp-body">
-                                <ul class="exp-lista">
-                                    <li>Suporte ao setor de compras com controle e gestão de estoque de autopeças.</li>
-                                    <li>Análise e organização de dados de fornecedores e pedidos.</li>
-                                    <li>Auxílio em processos de cotação e negociação com fornecedores.</li>
-                                </ul>
+            <div class="timeline reveal delay-1">
+                <div class="tl-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-card">
+                        <div class="tl-header">
+                            <div>
+                                <span class="tl-badge">Emprego Atual</span>
+                                <h3 class="tl-cargo">Auxiliar de Compras</h3>
+                                <p class="tl-empresa">Krambeck Autopeças</p>
+                                <p class="tl-periodo">fev 2026 – presente</p>
                             </div>
                         </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <hr class="separacao"  id="academica">
-
-    <!-- Formação Acadêmica -->
-    <section class="formacao-academica">
-        <div class="interface">
-            <div class="elemento-escondido">
-                <h2 class="projetos-titulo">Formação Acadêmica</h2>
-                <br>
-                <div style="display: flex; justify-content: center;">
-                    <hr>
-                </div>
-            </div>
-            <div class="elemento-escondido">
-                <div class="formacao-container">
-                    <div class="formacao-card">
-                        <div class="formacao-icone">
-                            <img src="Imagens/Uninter.png" alt="Ícone de formação">
-                        </div>
-                        <div class="formacao-conteudo">
-                            <h3>Tecnólogo em Ciência de Dados</h3>
-                            <p class="instituicao">UNINTER</p>
-                            <p class="periodo">2026 - 2028</p>
-                            <p class="descricao">
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="formacao-card">
-                        <div class="formacao-icone">
-                            <img src="Imagens/Cedup-Timbó.jpg" alt="Ícone de formação">
-                        </div>
-                        <div class="formacao-conteudo">
-                            <h3>Técnico em Ciência de Dados</h3>
-                            <p class="instituicao">Cedup Timbó</p>
-                            <p class="periodo">2023 - 2025</p>
-                            <p class="descricao">
-                                Formação técnica focada em análise de dados, machine learning, modelagem estatística, 
-                                desenvolvimento web e banco de dados. Conhecimento em Python, R, SQL, Power BI e metodologias ágeis.
-                            </p>
+                        <div class="tl-desc">
+                            <p>Atuação focada em <strong>qualidade de dados</strong> e automação de processos no setor de compras de peças automotivas:</p>
+                            <ul>
+                                <li>Coleta, tratamento, validação e higienização de dados de produtos automotivos a partir de fontes estruturadas e não estruturadas</li>
+                                <li>Desenvolvimento de <strong>automações RPA</strong> com Python (Pywinauto + Selenium) para eliminação de tarefas manuais repetitivas</li>
+                                <li>Gestão de bases cadastrais em ambiente ERP</li>
+                                <li>Análise e organização de dados de fornecedores e pedidos</li>
+                                <li>Auxílio em processos de cotação e negociação com fornecedores</li>
+                            </ul>
+                            <div class="tl-stack">
+                                <span>Python</span>
+                                <span>Pywinauto</span>
+                                <span>Selenium</span>
+                                <span>RPA</span>
+                                <span>ERP</span>
+                                <span>ETL</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -658,365 +622,132 @@
         </div>
     </section>
 
-    <hr class="separacao"  id="certificados">
-    <!-- Certificados -->
-    <section class="certificados">
-        <div class="interface">
-            <div class="elemento-escondido">
-                <h2 class="certificados-titulo">Certificados</h2>
-                <br>
-                <div style="display: flex; justify-content: center;">
-                    <hr>
+    <!-- FORMAÇÃO -->
+    <section class="section formacao" id="formacao">
+        <div class="container">
+            <div class="section-label reveal">05 / formação</div>
+            <h2 class="section-title reveal">Formação <span class="accent">Acadêmica</span></h2>
+
+            <div class="form-grid reveal delay-1">
+                <div class="form-card">
+                    <div class="form-year">2026–2028</div>
+                    <img src="Imagens/Uninter.png" alt="UNINTER" class="form-logo">
+                    <h3>Tecnólogo em Ciência de Dados</h3>
+                    <p class="form-inst">UNINTER</p>
+                    <p class="form-desc">Graduação tecnológica com foco em ciência de dados, análise estatística e inteligência artificial aplicada.</p>
+                    <div class="form-status current">Em andamento</div>
+                </div>
+                <div class="form-card">
+                    <div class="form-year">2023–2025</div>
+                    <img src="Imagens/Cedup-Timbó.jpg" alt="Cedup Timbó" class="form-logo">
+                    <h3>Técnico em Ciência de Dados</h3>
+                    <p class="form-inst">Cedup Timbó</p>
+                    <p class="form-desc">Formação técnica focada em análise de dados, machine learning, modelagem estatística, desenvolvimento web e banco de dados. Python, R, SQL, Power BI e metodologias ágeis.</p>
+                    <div class="form-status done">Concluído</div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Contador de conquistas -->
-            <div class="elemento-escondido cert-stats">
-                <div class="cert-stat-item">
-                    <span class="cert-stat-num">24</span>
-                    <span class="cert-stat-label">Certificados</span>
-                </div>
-                <div class="cert-stat-divider"></div>
-                <div class="cert-stat-item">
-                    <span class="cert-stat-num">1.367</span>
-                    <span class="cert-stat-label">Horas de Curso</span>
-                </div>
-                <div class="cert-stat-divider"></div>
-                <div class="cert-stat-item">
-                    <span class="cert-stat-num">10</span>
-                    <span class="cert-stat-label">Instituições</span>
-                </div>
+    <!-- CERTIFICADOS -->
+    <section class="section certificados" id="certificados">
+        <div class="container">
+            <div class="section-label reveal">06 / certificados</div>
+            <h2 class="section-title reveal">Certificados & <span class="accent">Conquistas</span></h2>
+
+            <div class="cert-meta reveal delay-1">
+                <div class="cert-stat"><span>24</span> certificados</div>
+                <div class="cert-stat"><span>1.367h</span> de formação</div>
+                <div class="cert-stat"><span>10</span> instituições</div>
             </div>
 
-            <!-- Filtros por categoria -->
-            <div class="elemento-escondido cert-filtros">
-                <button class="cert-filtro-btn active" data-filtro="todos">Todos</button>
-                <button class="cert-filtro-btn" data-filtro="dados">Dados & BI</button>
-                <button class="cert-filtro-btn" data-filtro="ia">IA & ML</button>
-                <button class="cert-filtro-btn" data-filtro="dev">Dev & BD</button>
-                <button class="cert-filtro-btn" data-filtro="design">Design & Jogos</button>
+            <div class="filtros reveal delay-1">
+                <button class="filtro active" data-fc="todos">Todos</button>
+                <button class="filtro" data-fc="dados">Dados & BI</button>
+                <button class="filtro" data-fc="ia">IA & ML</button>
+                <button class="filtro" data-fc="dev">Dev & BD</button>
+                <button class="filtro" data-fc="design">Design & Jogos</button>
             </div>
 
-            <!-- Grid de certificados -->
-            <div class="elemento-escondido cert-grid" id="cert-grid">
-
+            <div class="cert-grid" id="certGrid">
                 <!-- DADOS & BI -->
-                <div class="cert-card" data-categoria="dados">
-                    <div class="cert-card-topo">
-                        <span class="cert-tag cert-tag-dados">Dados & BI</span>
-                        <span class="cert-horas">30h</span>
-                    </div>
-                    <h3 class="cert-nome">Fundamentos de Análise de Dados</h3>
-                    <div class="cert-rodape">
-                        <span class="cert-inst">Cisco</span>
-                        <span class="cert-ano">2026</span>
-                    </div>
-                </div>
-
-                <div class="cert-card" data-categoria="dados">
-                    <div class="cert-card-topo">
-                        <span class="cert-tag cert-tag-dados">Dados & BI</span>
-                        <span class="cert-horas">30h</span>
-                    </div>
-                    <h3 class="cert-nome">Excel Avançado</h3>
-                    <div class="cert-rodape">
-                        <span class="cert-inst">Enap</span>
-                        <span class="cert-ano">2026</span>
-                    </div>
-                </div>
-
-                <div class="cert-card" data-categoria="dados">
-                    <div class="cert-card-topo">
-                        <span class="cert-tag cert-tag-dados">Dados & BI</span>
-                        <span class="cert-horas">20h</span>
-                    </div>
-                    <h3 class="cert-nome">Python for Data Science</h3>
-                    <div class="cert-rodape">
-                        <span class="cert-inst">IBM</span>
-                        <span class="cert-ano">2025</span>
-                    </div>
-                </div>
-
-                <div class="cert-card" data-categoria="dados">
-                    <div class="cert-card-topo">
-                        <span class="cert-tag cert-tag-dados">Dados & BI</span>
-                        <span class="cert-horas">20h</span>
-                    </div>
-                    <h3 class="cert-nome">Data Analysis with Python</h3>
-                    <div class="cert-rodape">
-                        <span class="cert-inst">IBM</span>
-                        <span class="cert-ano">2025</span>
-                    </div>
-                </div>
-
-                <div class="cert-card" data-categoria="dados">
-                    <div class="cert-card-topo">
-                        <span class="cert-tag cert-tag-dados">Dados & BI</span>
-                        <span class="cert-horas">20h</span>
-                    </div>
-                    <h3 class="cert-nome">Data Visualization with Python</h3>
-                    <div class="cert-rodape">
-                        <span class="cert-inst">IBM</span>
-                        <span class="cert-ano">2025</span>
-                    </div>
-                </div>
-
-                <div class="cert-card" data-categoria="dados">
-                    <div class="cert-card-topo">
-                        <span class="cert-tag cert-tag-dados">Dados & BI</span>
-                        <span class="cert-horas">24h</span>
-                    </div>
-                    <h3 class="cert-nome">Data Science e Inteligência Artificial</h3>
-                    <div class="cert-rodape">
-                        <span class="cert-inst">DSA</span>
-                        <span class="cert-ano">2025</span>
-                    </div>
-                </div>
-
-                <div class="cert-card" data-categoria="dados">
-                    <div class="cert-card-topo">
-                        <span class="cert-tag cert-tag-dados">Dados & BI</span>
-                        <span class="cert-horas">75h</span>
-                    </div>
-                    <h3 class="cert-nome">Power BI Para Business Intelligence e Data Science</h3>
-                    <div class="cert-rodape">
-                        <span class="cert-inst">DSA</span>
-                        <span class="cert-ano">2025</span>
-                    </div>
-                </div>
-
-                <div class="cert-card" data-categoria="dados">
-                    <div class="cert-card-topo">
-                        <span class="cert-tag cert-tag-dados">Dados & BI</span>
-                        <span class="cert-horas">20h</span>
-                    </div>
-                    <h3 class="cert-nome">Análise de Dados em Linguagem R</h3>
-                    <div class="cert-rodape">
-                        <span class="cert-inst">Enap</span>
-                        <span class="cert-ano">2025</span>
-                    </div>
-                </div>
-
-                <div class="cert-card" data-categoria="dados">
-                    <div class="cert-card-topo">
-                        <span class="cert-tag cert-tag-dados">Dados & BI</span>
-                        <span class="cert-horas">25h</span>
-                    </div>
-                    <h3 class="cert-nome">Soluções Preditivas Baseadas em Dados</h3>
-                    <div class="cert-rodape">
-                        <span class="cert-inst">Enap</span>
-                        <span class="cert-ano">2025</span>
-                    </div>
-                </div>
-
-                <div class="cert-card" data-categoria="dados">
-                    <div class="cert-card-topo">
-                        <span class="cert-tag cert-tag-dados">Dados & BI</span>
-                        <span class="cert-horas">40h</span>
-                    </div>
-                    <h3 class="cert-nome">Business Intelligence (BI)</h3>
-                    <div class="cert-rodape">
-                        <span class="cert-inst">FIAP</span>
-                        <span class="cert-ano">2025</span>
-                    </div>
-                </div>
-                <div class="cert-card" data-categoria="dados">
-                    <div class="cert-card-topo">
-                        <span class="cert-tag cert-tag-dados">Dados & BI</span>
-                        <span class="cert-horas">60h</span>
-                    </div>
-                    <h3 class="cert-nome">Big Data & Analytics</h3>
-                    <div class="cert-rodape">
-                        <span class="cert-inst">FIAP</span>
-                        <span class="cert-ano">2026</span>
-                    </div>
-                </div>
-
-                <div class="cert-card" data-categoria="dados">
-                    <div class="cert-card-topo">
-                        <span class="cert-tag cert-tag-dados">Dados & BI</span>
-                        <span class="cert-horas">24h</span>
-                    </div>
-                    <h3 class="cert-nome">Fundamentos da Engenharia de Dados</h3>
-                    <div class="cert-rodape">
-                        <span class="cert-inst">DSA</span>
-                        <span class="cert-ano">2026</span>
-                    </div>
-                </div>
-
+                <div class="cert-card" data-cc="dados"><div class="cc-top"><span class="ctag ctag-dados">Dados & BI</span><span class="choras">30h</span></div><h4>Fundamentos de Análise de Dados</h4><div class="cc-bot"><span class="cinst">Cisco</span><span class="cano">2026</span></div></div>
+                <div class="cert-card" data-cc="dados"><div class="cc-top"><span class="ctag ctag-dados">Dados & BI</span><span class="choras">30h</span></div><h4>Excel Avançado</h4><div class="cc-bot"><span class="cinst">Enap</span><span class="cano">2026</span></div></div>
+                <div class="cert-card" data-cc="dados"><div class="cc-top"><span class="ctag ctag-dados">Dados & BI</span><span class="choras">20h</span></div><h4>Python for Data Science</h4><div class="cc-bot"><span class="cinst">IBM</span><span class="cano">2025</span></div></div>
+                <div class="cert-card" data-cc="dados"><div class="cc-top"><span class="ctag ctag-dados">Dados & BI</span><span class="choras">20h</span></div><h4>Data Analysis with Python</h4><div class="cc-bot"><span class="cinst">IBM</span><span class="cano">2025</span></div></div>
+                <div class="cert-card" data-cc="dados"><div class="cc-top"><span class="ctag ctag-dados">Dados & BI</span><span class="choras">20h</span></div><h4>Data Visualization with Python</h4><div class="cc-bot"><span class="cinst">IBM</span><span class="cano">2025</span></div></div>
+                <div class="cert-card" data-cc="dados"><div class="cc-top"><span class="ctag ctag-dados">Dados & BI</span><span class="choras">24h</span></div><h4>Data Science e Inteligência Artificial</h4><div class="cc-bot"><span class="cinst">DSA</span><span class="cano">2025</span></div></div>
+                <div class="cert-card" data-cc="dados"><div class="cc-top"><span class="ctag ctag-dados">Dados & BI</span><span class="choras">75h</span></div><h4>Power BI Para Business Intelligence e Data Science</h4><div class="cc-bot"><span class="cinst">DSA</span><span class="cano">2025</span></div></div>
+                <div class="cert-card" data-cc="dados"><div class="cc-top"><span class="ctag ctag-dados">Dados & BI</span><span class="choras">20h</span></div><h4>Análise de Dados em Linguagem R</h4><div class="cc-bot"><span class="cinst">Enap</span><span class="cano">2025</span></div></div>
+                <div class="cert-card" data-cc="dados"><div class="cc-top"><span class="ctag ctag-dados">Dados & BI</span><span class="choras">25h</span></div><h4>Soluções Preditivas Baseadas em Dados</h4><div class="cc-bot"><span class="cinst">Enap</span><span class="cano">2025</span></div></div>
+                <div class="cert-card" data-cc="dados"><div class="cc-top"><span class="ctag ctag-dados">Dados & BI</span><span class="choras">40h</span></div><h4>Business Intelligence (BI)</h4><div class="cc-bot"><span class="cinst">FIAP</span><span class="cano">2025</span></div></div>
+                <div class="cert-card" data-cc="dados"><div class="cc-top"><span class="ctag ctag-dados">Dados & BI</span><span class="choras">60h</span></div><h4>Big Data & Analytics</h4><div class="cc-bot"><span class="cinst">FIAP</span><span class="cano">2026</span></div></div>
+                <div class="cert-card" data-cc="dados"><div class="cc-top"><span class="ctag ctag-dados">Dados & BI</span><span class="choras">24h</span></div><h4>Fundamentos da Engenharia de Dados</h4><div class="cc-bot"><span class="cinst">DSA</span><span class="cano">2026</span></div></div>
                 <!-- IA & ML -->
-                <div class="cert-card" data-categoria="ia">
-                    <div class="cert-card-topo">
-                        <span class="cert-tag cert-tag-ia">IA & ML</span>
-                        <span class="cert-horas">25h</span>
-                    </div>
-                    <h3 class="cert-nome">Soluções Preditivas Baseadas em Dados</h3>
-                    <div class="cert-rodape">
-                        <span class="cert-inst">Enap</span>
-                        <span class="cert-ano">2025</span>
-                    </div>
-                </div>
-
-                <div class="cert-card" data-categoria="ia">
-                    <div class="cert-card-topo">
-                        <span class="cert-tag cert-tag-ia">IA & ML</span>
-                        <span class="cert-horas">40h</span>
-                    </div>
-                    <h3 class="cert-nome">Inteligência Artificial II</h3>
-                    <div class="cert-rodape">
-                        <span class="cert-inst">IFTM</span>
-                        <span class="cert-ano">2026</span>
-                    </div>
-                </div>
-
-                <div class="cert-card" data-categoria="ia">
-                    <div class="cert-card-topo">
-                        <span class="cert-tag cert-tag-ia">IA & ML</span>
-                        <span class="cert-horas">40h</span>
-                    </div>
-                    <h3 class="cert-nome">Inteligência Artificial I</h3>
-                    <div class="cert-rodape">
-                        <span class="cert-inst">IFTM</span>
-                        <span class="cert-ano">2026</span>
-                    </div>
-                </div>
-
-                <div class="cert-card" data-categoria="ia">
-                    <div class="cert-card-topo">
-                        <span class="cert-tag cert-tag-ia">IA & ML</span>
-                        <span class="cert-horas">80h</span>
-                    </div>
-                    <h3 class="cert-nome">Inteligência Artificial e Computacional</h3>
-                    <div class="cert-rodape">
-                        <span class="cert-inst">FIAP</span>
-                        <span class="cert-ano">2026</span>
-                    </div>
-                </div>
-
-                <div class="cert-card" data-categoria="ia">
-                    <div class="cert-card-topo">
-                        <span class="cert-tag cert-tag-ia">IA & ML</span>
-                        <span class="cert-horas">80h</span>
-                    </div>
-                    <h3 class="cert-nome">Inteligência Artificial Responsável</h3>
-                    <div class="cert-rodape">
-                        <span class="cert-inst">FIAP</span>
-                        <span class="cert-ano">2026</span>
-                    </div>
-                </div>
-
+                <div class="cert-card" data-cc="ia"><div class="cc-top"><span class="ctag ctag-ia">IA & ML</span><span class="choras">25h</span></div><h4>Soluções Preditivas Baseadas em Dados</h4><div class="cc-bot"><span class="cinst">Enap</span><span class="cano">2025</span></div></div>
+                <div class="cert-card" data-cc="ia"><div class="cc-top"><span class="ctag ctag-ia">IA & ML</span><span class="choras">40h</span></div><h4>Inteligência Artificial II</h4><div class="cc-bot"><span class="cinst">IFTM</span><span class="cano">2026</span></div></div>
+                <div class="cert-card" data-cc="ia"><div class="cc-top"><span class="ctag ctag-ia">IA & ML</span><span class="choras">40h</span></div><h4>Inteligência Artificial I</h4><div class="cc-bot"><span class="cinst">IFTM</span><span class="cano">2026</span></div></div>
+                <div class="cert-card" data-cc="ia"><div class="cc-top"><span class="ctag ctag-ia">IA & ML</span><span class="choras">80h</span></div><h4>Inteligência Artificial e Computacional</h4><div class="cc-bot"><span class="cinst">FIAP</span><span class="cano">2026</span></div></div>
+                <div class="cert-card" data-cc="ia"><div class="cc-top"><span class="ctag ctag-ia">IA & ML</span><span class="choras">80h</span></div><h4>Inteligência Artificial Responsável</h4><div class="cc-bot"><span class="cinst">FIAP</span><span class="cano">2026</span></div></div>
                 <!-- DEV & BD -->
-                <div class="cert-card" data-categoria="dev">
-                    <div class="cert-card-topo">
-                        <span class="cert-tag cert-tag-dev">Dev & BD</span>
-                        <span class="cert-horas">200h</span>
-                    </div>
-                    <h3 class="cert-nome">Programador Web</h3>
-                    <div class="cert-rodape">
-                        <span class="cert-inst">IFRS</span>
-                        <span class="cert-ano">2025</span>
-                    </div>
-                </div>
-
-                <div class="cert-card" data-categoria="dev">
-                    <div class="cert-card-topo">
-                        <span class="cert-tag cert-tag-dev">Dev & BD</span>
-                        <span class="cert-horas">200h</span>
-                    </div>
-                    <h3 class="cert-nome">Administrador de Banco de Dados</h3>
-                    <div class="cert-rodape">
-                        <span class="cert-inst">IFRS</span>
-                        <span class="cert-ano">2025</span>
-                    </div>
-                </div>
-
-                <div class="cert-card" data-categoria="dev">
-                    <div class="cert-card-topo">
-                        <span class="cert-tag cert-tag-dev">Dev & BD</span>
-                        <span class="cert-horas">20h</span>
-                    </div>
-                    <h3 class="cert-nome">Estrutura de Dados</h3>
-                    <div class="cert-rodape">
-                        <span class="cert-inst">IFRS</span>
-                        <span class="cert-ano">2025</span>
-                    </div>
-                </div>
-
-                <div class="cert-card" data-categoria="dev">
-                    <div class="cert-card-topo">
-                        <span class="cert-tag cert-tag-dev">Dev & BD</span>
-                        <span class="cert-horas">20h</span>
-                    </div>
-                    <h3 class="cert-nome">Banco de Dados: Oracle PL/SQL</h3>
-                    <div class="cert-rodape">
-                        <span class="cert-inst">IFRS</span>
-                        <span class="cert-ano">2025</span>
-                    </div>
-                </div>
-
-                <div class="cert-card" data-categoria="dev">
-                    <div class="cert-card-topo">
-                        <span class="cert-tag cert-tag-dev">Dev & BD</span>
-                        <span class="cert-horas">20h</span>
-                    </div>
-                    <h3 class="cert-nome">Desvendando a Indústria 4.0</h3>
-                    <div class="cert-rodape">
-                        <span class="cert-inst">SENAI/SC</span>
-                        <span class="cert-ano">2020</span>
-                    </div>
-                </div>
-
+                <div class="cert-card" data-cc="dev"><div class="cc-top"><span class="ctag ctag-dev">Dev & BD</span><span class="choras">200h</span></div><h4>Programador Web</h4><div class="cc-bot"><span class="cinst">IFRS</span><span class="cano">2025</span></div></div>
+                <div class="cert-card" data-cc="dev"><div class="cc-top"><span class="ctag ctag-dev">Dev & BD</span><span class="choras">200h</span></div><h4>Administrador de Banco de Dados</h4><div class="cc-bot"><span class="cinst">IFRS</span><span class="cano">2025</span></div></div>
+                <div class="cert-card" data-cc="dev"><div class="cc-top"><span class="ctag ctag-dev">Dev & BD</span><span class="choras">20h</span></div><h4>Estrutura de Dados</h4><div class="cc-bot"><span class="cinst">IFRS</span><span class="cano">2025</span></div></div>
+                <div class="cert-card" data-cc="dev"><div class="cc-top"><span class="ctag ctag-dev">Dev & BD</span><span class="choras">20h</span></div><h4>Banco de Dados: Oracle PL/SQL</h4><div class="cc-bot"><span class="cinst">IFRS</span><span class="cano">2025</span></div></div>
+                <div class="cert-card" data-cc="dev"><div class="cc-top"><span class="ctag ctag-dev">Dev & BD</span><span class="choras">20h</span></div><h4>Desvendando a Indústria 4.0</h4><div class="cc-bot"><span class="cinst">SENAI/SC</span><span class="cano">2020</span></div></div>
                 <!-- DESIGN & JOGOS -->
-                <div class="cert-card" data-categoria="design">
-                    <div class="cert-card-topo">
-                        <span class="cert-tag cert-tag-design">Design & Jogos</span>
-                        <span class="cert-horas">160h</span>
-                    </div>
-                    <h3 class="cert-nome">Game Designer</h3>
-                    <div class="cert-rodape">
-                        <span class="cert-inst">FIAP</span>
-                        <span class="cert-ano">2026</span>
-                    </div>
-                </div>
-                <div class="cert-card" data-categoria="design">
-                    <div class="cert-card-topo">
-                        <span class="cert-tag cert-tag-design">Design & Jogos</span>
-                        <span class="cert-horas">160h</span>
-                    </div>
-                    <h3 class="cert-nome">Design Gráfico</h3>
-                    <div class="cert-rodape">
-                        <span class="cert-inst">FIAP</span>
-                        <span class="cert-ano">2026</span>
-                    </div>
-                </div>
-            </div><!-- /cert-grid -->
-            <div class="cert-grid-fade" id="cert-fade"></div>
-            <button class="btn-ver-mais" id="btn-ver-mais-cert">
-                Ver mais certificados
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
+                <div class="cert-card" data-cc="design"><div class="cc-top"><span class="ctag ctag-design">Design & Jogos</span><span class="choras">160h</span></div><h4>Game Designer</h4><div class="cc-bot"><span class="cinst">FIAP</span><span class="cano">2026</span></div></div>
+                <div class="cert-card" data-cc="design"><div class="cc-top"><span class="ctag ctag-design">Design & Jogos</span><span class="choras">160h</span></div><h4>Design Gráfico</h4><div class="cc-bot"><span class="cinst">FIAP</span><span class="cano">2026</span></div></div>
+            </div>
 
+            <div class="cert-fade" id="certFade"></div>
+            <button class="btn-mais" id="btnCertMais">
+                <span>Ver mais certificados</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
         </div>
     </section>
-    <br><br><br>
 
-    <!-- Contatos -->
-    <footer id="contatos">
-        <div class="interface">
-            <p class="conversar">Vamos Conversar!</p>
-            <div class="btn-social">
-                <a href="https://www.linkedin.com/in/aram-luz-1b0ab1321" target="_blank"><button><img src="Imagens/icon-linkedim.png" alt="LinkedIn" id="linkedin"></button></button></a>
-                <a href="https://github.com/Aram-Bohmann" target="_blank"><button><img src="Imagens/icon-github-cinza.png" alt="Github" id="github"></button></a>
-                <span><a href="mailto:arambohmannleitedaluz@gmail.com" target="_blank"><button ><img src="Imagens/icon-email.png" alt="Email" id="email"></button></a></span>
+    <!-- CONTATO -->
+    <footer class="footer" id="contatos">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-text reveal">
+                    <p class="footer-eyebrow">Pronto para colaborar?</p>
+                    <h2>Vamos <span class="accent">conversar</span></h2>
+                    <p class="footer-sub">Busco oportunidades em Ciência de Dados, Engenharia de Dados ou Análise de Dados onde possa contribuir com soluções de impacto em ambientes dinâmicos e orientados a dados.</p>
+                </div>
+                <div class="footer-links reveal delay-1">
+                    <a href="mailto:arambohmannleitedaluz@gmail.com" class="footer-link-card">
+                        <span class="flc-icon">✉</span>
+                        <div>
+                            <p class="flc-label">Email</p>
+                            <p class="flc-val">arambohmannleitedaluz@gmail.com</p>
+                        </div>
+                    </a>
+                    <a href="https://www.linkedin.com/in/aram-luz-1b0ab1321" target="_blank" class="footer-link-card">
+                        <span class="flc-icon">in</span>
+                        <div>
+                            <p class="flc-label">LinkedIn</p>
+                            <p class="flc-val">aram-luz-1b0ab1321</p>
+                        </div>
+                    </a>
+                    <a href="https://github.com/Aram-Bohmann" target="_blank" class="footer-link-card">
+                        <span class="flc-icon">gh</span>
+                        <div>
+                            <p class="flc-label">GitHub</p>
+                            <p class="flc-val">Aram-Bohmann</p>
+                        </div>
+                    </a>
+                </div>
             </div>
-            <p class="creditos">© 2026 Aram Bohmann Leite da Luz. Todos os direitos reservados.</p>
-
-        </div> <!-- interface-->
+            <div class="footer-bar reveal">
+                <span>© 2026 Aram Bohmann Leite da Luz</span>
+                <span class="footer-stack">Data Scientist · Data Engineer · Data Analyst</span>
+            </div>
+        </div>
     </footer>
 
-    <!-- Link SwiperJS Script -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-    <!-- Link do JavaScript -->
     <script src="index.js"></script>
 </body>
 </html>
